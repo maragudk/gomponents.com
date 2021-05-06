@@ -18,6 +18,9 @@ func Page(title, description string, body g.Node) g.Node {
 		Language:    "en",
 		Head: []g.Node{
 			Link(Rel("stylesheet"), Href("/styles/app.css"), Type("text/css")),
+			Link(Rel("stylesheet"), Href("/styles/highlightjs.min.css"), Type("text/css")),
+			Script(Src("/scripts/highlight.min.js")),
+			Script(g.Raw("hljs.highlightAll();")),
 		},
 		Body: []g.Node{
 			Container(
@@ -42,5 +45,9 @@ func Prose(children ...g.Node) g.Node {
 }
 
 func CodeBlock(text string) g.Node {
-	return Pre(Code(g.Text(text)))
+	return Pre(Code(Class("language-go"), g.Text(text)))
+}
+
+func BashBlock(text string) g.Node {
+	return Pre(Code(Class("language-bash"), g.Text(text)))
 }

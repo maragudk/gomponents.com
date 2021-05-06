@@ -33,11 +33,12 @@ func IndexPage() g.Node {
 	return Page(
 		"gomponents, view components in pure Go",
 		"View components in pure Go, that render to HTML5.",
+
 		Div(
 			H1(g.Text("Tired of complex template languages?")),
 			H2(g.Text("Try view components in pure Go.")),
 			g.Raw(`<em>gomponents</em> are view components written in pure Go. They render to HTML 5, and make it easy for you to build reusable components. So you can focus on building your app instead of learning yet another templating language.`),
-			CodeBlock("$ go get -u github.com/maragudk/gomponents"),
+			BashBlock("$ go get -u github.com/maragudk/gomponents"),
 
 			H3(g.Text("Components are just functions")),
 			P(g.Text("Have a look at this component. If you know HTML, you know what it does. Easy, right?")),
@@ -65,7 +66,7 @@ func IndexPage() g.Node {
 			P(g.Text("Your editor helps you with auto-completion. It's type-safe. Nice formatting using gofmt. And all common HTML elements and attributes are included! And gomponents is open source, contributions are welcome.")),
 
 			H2(g.Text("Get started")),
-			CodeBlock("$ go get -u github.com/maragudk/gomponents"),
+			BashBlock("$ go get -u github.com/maragudk/gomponents"),
 
 			H3(g.Text("A sample app")),
 			P(
