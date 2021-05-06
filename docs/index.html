@@ -37,7 +37,7 @@ func NavbarItem(name, path string) g.Node {
 func NavbarItem(name, path string) g.Node {
 	return Li(A(Href(path), g.Text(name)))
 }
-</code></pre><h3>Map data to components</h3><p>What if you have data and what to map it to components? No problem.</p><pre><code class="language-go">type NavLink struct {
+</code></pre><h3>Map data to components</h3><p>What if you have data and want to map it to components? No problem.</p><pre><code class="language-go">type NavLink struct {
 	Name string
 	Path string
 }

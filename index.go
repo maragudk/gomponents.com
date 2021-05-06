@@ -51,7 +51,7 @@ func IndexPage() g.Node {
 			CodeBlock(stripLines(navbar2, 7)),
 
 			H3(g.Text("Map data to components")),
-			P(g.Text("What if you have data and what to map it to components? No problem.")),
+			P(g.Text("What if you have data and want to map it to components? No problem.")),
 			CodeBlock(stripLines(navbar3, 7)),
 
 			H3(g.Text("Styling")),
