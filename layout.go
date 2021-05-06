@@ -28,7 +28,14 @@ func Page(title, description string, body g.Node) g.Node {
 					body,
 				),
 				Footer(Class("mt-32 prose prose-sm prose-indigo"),
-					g.Text("made in 🇩🇰 by "), A(Href("https://www.maragu.dk"), g.Text("maragu")),
+					P(
+						g.Text("made in 🇩🇰 by "),
+						A(Href("https://www.maragu.dk"), g.Text("maragu")),
+					),
+					P(
+						g.Text("maker of "),
+						A(Href("https://www.golang.dk"), g.Text("online Go courses")),
+					),
 				),
 			),
 		},
