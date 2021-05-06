@@ -24,6 +24,9 @@ func Page(title, description string, body g.Node) g.Node {
 				Prose(
 					body,
 				),
+				Footer(Class("mt-32 prose prose-sm prose-indigo"),
+					g.Text("made in 🇩🇰 by "), A(Href("https://www.maragu.dk"), g.Text("maragu")),
+				),
 			),
 		},
 	})
