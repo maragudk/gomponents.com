@@ -37,3 +37,7 @@ func Container(children ...g.Node) g.Node {
 func Prose(children ...g.Node) g.Node {
 	return Div(Class("prose lg:prose-lg xl:prose-xl prose-indigo"), g.Group(children))
 }
+
+func CodeBlock(text string) g.Node {
+	return Pre(Code(g.Text(text)))
+}

@@ -1,1 +1,129 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>gomponents, declarative view components in Go</title><meta name="description" content="Declarative view components in Go, that can render to HTML5."><link rel="stylesheet" href="/styles/app.css" type="text/css"></head><body><div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8"><div class="prose lg:prose-lg xl:prose-xl prose-indigo"><div><h1>gomponents</h1><h2>Declarative view components in Go.</h2><p>See <a href="https://github.com/maragudk/gomponents">the Github repository</a>.</p></div></div><footer></footer></div></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>gomponents, declarative view components in Go</title><meta name="description" content="View components in pure Go, that render to HTML5."><link rel="stylesheet" href="/styles/app.css" type="text/css"></head><body><div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8"><div class="prose lg:prose-lg xl:prose-xl prose-indigo"><div><h1>Tired of template languages?</h1><h2>Try view components in pure Go.</h2><em>gomponents</em> are view components written in pure Go. They render to HTML 5, and make it easy for you to build reusable components. So you can focus on building your app instead of learning yet another templating language.<h2>Get started</h2><pre><code>$ go get -u github.com/maragudk/gomponents</code></pre><h3>A sample app</h3><pre><code>package main
+
+import (
+	&#34;net/http&#34;
+	&#34;time&#34;
+
+	g &#34;github.com/maragudk/gomponents&#34;
+	c &#34;github.com/maragudk/gomponents/components&#34;
+	. &#34;github.com/maragudk/gomponents/html&#34;
+)
+
+func main() {
+	http.Handle(&#34;/&#34;, createHandler(indexPage()))
+	http.Handle(&#34;/contact&#34;, createHandler(contactPage()))
+	http.Handle(&#34;/about&#34;, createHandler(aboutPage()))
+
+	_ = http.ListenAndServe(&#34;localhost:8080&#34;, nil)
+}
+
+func createHandler(title string, body g.Node) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		// Rendering a Node is as simple as calling Render and passing an io.Writer
+		_ = Page(title, r.URL.Path, body).Render(w)
+	}
+}
+
+func indexPage() (string, g.Node) {
+	return &#34;Welcome!&#34;, Div(
+		H1(g.Text(&#34;Welcome to this example page&#34;)),
+		P(g.Text(&#34;I hope it will make you happy. 😄 It&#39;s using TailwindCSS for styling.&#34;)),
+	)
+}
+
+func contactPage() (string, g.Node) {
+	return &#34;Contact&#34;, Div(
+		H1(g.Text(&#34;Contact us&#34;)),
+		P(g.Text(&#34;Just do it.&#34;)),
+	)
+}
+
+func aboutPage() (string, g.Node) {
+	return &#34;About&#34;, Div(
+		H1(g.Text(&#34;About this site&#34;)),
+		P(g.Text(&#34;This is a site showing off gomponents.&#34;)),
+	)
+}
+
+func Page(title, path string, body g.Node) g.Node {
+	// HTML5 boilerplate document
+	return c.HTML5(c.HTML5Props{
+		Title:    title,
+		Language: &#34;en&#34;,
+		Head: []g.Node{
+			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/tailwindcss@^2.1.x/dist/base.min.css&#34;)),
+			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/tailwindcss@^2.1.x/dist/components.min.css&#34;)),
+			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css&#34;)),
+			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/tailwindcss@^2.1.x/dist/utilities.min.css&#34;)),
+		},
+		Body: []g.Node{
+			Navbar(path, []PageLink{
+				{Path: &#34;/contact&#34;, Name: &#34;Contact&#34;},
+				{Path: &#34;/about&#34;, Name: &#34;About&#34;},
+			}),
+			Container(Prose(body)),
+			PageFooter(),
+		},
+	})
+}
+
+type PageLink struct {
+	Path string
+	Name string
+}
+
+func Navbar(currentPath string, links []PageLink) g.Node {
+	return Div(
+		Nav(Class(&#34;bg-gray-700 mb-4&#34;),
+			Container(
+				Div(Class(&#34;flex items-center space-x-4 h-16&#34;),
+					NavbarLink(&#34;/&#34;, &#34;Home&#34;, currentPath == &#34;/&#34;),
+
+					// We can Map custom slices to Nodes
+					g.Group(g.Map(len(links), func(i int) g.Node {
+						return NavbarLink(links[i].Path, links[i].Name, currentPath == links[i].Path)
+					})),
+				),
+			),
+		),
+	)
+}
+
+// NavbarLink is a link in the Navbar.
+func NavbarLink(path, text string, active bool) g.Node {
+	return A(Href(path),
+		// Apply CSS classes conditionally
+		c.Classes{
+			&#34;px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:text-white focus:bg-gray-700&#34;: true,
+			&#34;text-white bg-gray-900&#34;:                           active,
+			&#34;text-gray-300 hover:text-white hover:bg-gray-700&#34;: !active,
+		},
+		g.Text(text),
+	)
+}
+
+func Container(children ...g.Node) g.Node {
+	return Div(Class(&#34;max-w-7xl mx-auto px-2 sm:px-6 lg:px-8&#34;), g.Group(children))
+}
+
+func Prose(children ...g.Node) g.Node {
+	return Div(Class(&#34;prose&#34;), g.Group(children))
+}
+
+func PageFooter() g.Node {
+	return Container(
+		Footer(Class(&#34;prose prose-sm prose-indigo&#34;),
+			P(
+				// We can use string interpolation directly, like fmt.Sprintf.
+				g.Textf(&#34;Rendered %v. &#34;, time.Now().Format(time.RFC3339)),
+
+				// Conditional inclusion
+				g.If(time.Now().Second()%2 == 0, g.Text(&#34;It&#39;s an even second.&#34;)),
+				g.If(time.Now().Second()%2 == 1, g.Text(&#34;It&#39;s an odd second.&#34;)),
+			),
+
+			P(A(Href(&#34;https://www.gomponents.com&#34;), g.Text(&#34;gomponents&#34;))),
+		),
+	)
+}
+</code></pre><p>See <a href="https://github.com/maragudk/gomponents">the Github repository</a>.</p></div></div></div></body></html>

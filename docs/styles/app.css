@@ -516,7 +516,7 @@ video {
   height: auto;
 }
 
-[type='time'],textarea,select {
+[type='text'],[type='time'],textarea,select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -532,7 +532,7 @@ video {
   line-height: 1.5rem;
 }
 
- [type='time']:focus, textarea:focus, select:focus {
+[type='text']:focus, [type='time']:focus, textarea:focus, select:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
