@@ -61,8 +61,10 @@ func Page(title, path string, body g.Node) g.Node {
 				{Path: "/contact", Name: "Contact"},
 				{Path: "/about", Name: "About"},
 			}),
-			Container(Prose(body)),
-			PageFooter(),
+			Container(
+				Prose(body),
+				PageFooter(),
+			),
 		},
 	})
 }
@@ -91,14 +93,13 @@ func Navbar(currentPath string, links []PageLink) g.Node {
 
 // NavbarLink is a link in the Navbar.
 func NavbarLink(path, text string, active bool) g.Node {
-	return A(Href(path),
+	return A(Href(path), g.Text(text),
 		// Apply CSS classes conditionally
 		c.Classes{
 			"px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:text-white focus:bg-gray-700": true,
 			"text-white bg-gray-900":                           active,
 			"text-gray-300 hover:text-white hover:bg-gray-700": !active,
 		},
-		g.Text(text),
 	)
 }
 
@@ -111,18 +112,16 @@ func Prose(children ...g.Node) g.Node {
 }
 
 func PageFooter() g.Node {
-	return Container(
-		Footer(Class("prose prose-sm prose-indigo"),
-			P(
-				// We can use string interpolation directly, like fmt.Sprintf.
-				g.Textf("Rendered %v. ", time.Now().Format(time.RFC3339)),
+	return Footer(Class("prose prose-sm prose-indigo"),
+		P(
+			// We can use string interpolation directly, like fmt.Sprintf.
+			g.Textf("Rendered %v. ", time.Now().Format(time.RFC3339)),
 
-				// Conditional inclusion
-				g.If(time.Now().Second()%2 == 0, g.Text("It's an even second.")),
-				g.If(time.Now().Second()%2 == 1, g.Text("It's an odd second.")),
-			),
-
-			P(A(Href("https://www.gomponents.com"), g.Text("gomponents"))),
+			// Conditional inclusion
+			g.If(time.Now().Second()%2 == 0, g.Text("It's an even second.")),
+			g.If(time.Now().Second()%2 == 1, g.Text("It's an odd second.")),
 		),
+
+		P(A(Href("https://www.gomponents.com"), g.Text("gomponents"))),
 	)
 }

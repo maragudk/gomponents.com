@@ -176,8 +176,10 @@ func Page(title, path string, body g.Node) g.Node {
 				{Path: &#34;/contact&#34;, Name: &#34;Contact&#34;},
 				{Path: &#34;/about&#34;, Name: &#34;About&#34;},
 			}),
-			Container(Prose(body)),
-			PageFooter(),
+			Container(
+				Prose(body),
+				PageFooter(),
+			),
 		},
 	})
 }
@@ -206,14 +208,13 @@ func Navbar(currentPath string, links []PageLink) g.Node {
 
 // NavbarLink is a link in the Navbar.
 func NavbarLink(path, text string, active bool) g.Node {
-	return A(Href(path),
+	return A(Href(path), g.Text(text),
 		// Apply CSS classes conditionally
 		c.Classes{
 			&#34;px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:text-white focus:bg-gray-700&#34;: true,
 			&#34;text-white bg-gray-900&#34;:                           active,
 			&#34;text-gray-300 hover:text-white hover:bg-gray-700&#34;: !active,
 		},
-		g.Text(text),
 	)
 }
 
@@ -226,19 +227,17 @@ func Prose(children ...g.Node) g.Node {
 }
 
 func PageFooter() g.Node {
-	return Container(
-		Footer(Class(&#34;prose prose-sm prose-indigo&#34;),
-			P(
-				// We can use string interpolation directly, like fmt.Sprintf.
-				g.Textf(&#34;Rendered %v. &#34;, time.Now().Format(time.RFC3339)),
+	return Footer(Class(&#34;prose prose-sm prose-indigo&#34;),
+		P(
+			// We can use string interpolation directly, like fmt.Sprintf.
+			g.Textf(&#34;Rendered %v. &#34;, time.Now().Format(time.RFC3339)),
 
-				// Conditional inclusion
-				g.If(time.Now().Second()%2 == 0, g.Text(&#34;It&#39;s an even second.&#34;)),
-				g.If(time.Now().Second()%2 == 1, g.Text(&#34;It&#39;s an odd second.&#34;)),
-			),
-
-			P(A(Href(&#34;https://www.gomponents.com&#34;), g.Text(&#34;gomponents&#34;))),
+			// Conditional inclusion
+			g.If(time.Now().Second()%2 == 0, g.Text(&#34;It&#39;s an even second.&#34;)),
+			g.If(time.Now().Second()%2 == 1, g.Text(&#34;It&#39;s an odd second.&#34;)),
 		),
+
+		P(A(Href(&#34;https://www.gomponents.com&#34;), g.Text(&#34;gomponents&#34;))),
 	)
 }
 </code></pre><p>See <a href="https://github.com/maragudk/gomponents">the Github repository</a> for more.</p></div></div><footer class="mt-32 prose prose-sm prose-indigo"><p>made in 🇩🇰 by <a href="https://www.maragu.dk">maragu</a></p><p>maker of <a href="https://www.golang.dk">online Go courses</a></p></footer></div></body></html>
