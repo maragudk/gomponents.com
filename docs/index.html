@@ -85,7 +85,7 @@ func NavbarItem(name, path string, active bool) g.Node {
 		&#34;inactive&#34;: !active,
 	})
 }
-</code></pre><h3>Sometimes you just want HTML</h3><p>Sometimes you just need to write some HTML. Use <code>Raw</code>.</p><pre><code class="language-go">type NavLink struct {
+</code></pre><h3>Sometimes you just want HTML</h3><p>Miss those &lt;tags&gt; or need to inject HTML from somewhere else?. Use <code>Raw</code>.</p><pre><code class="language-go">type NavLink struct {
 	Name string
 	Path string
 }

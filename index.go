@@ -59,7 +59,7 @@ func IndexPage() g.Node {
 			CodeBlock(stripLines(navbar4, 8)),
 
 			H3(g.Text("Sometimes you just want HTML")),
-			P(g.Text("Sometimes you just need to write some HTML. Use "), Code(g.Text("Raw")), g.Text(".")),
+			P(g.Text("Miss those <tags> or need to inject HTML from somewhere else?. Use "), Code(g.Text("Raw")), g.Text(".")),
 			CodeBlock(stripLines(navbar5, 8)),
 
 			H3(g.Text("It's all just Go")),
