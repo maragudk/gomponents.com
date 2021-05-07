@@ -190,17 +190,15 @@ type PageLink struct {
 }
 
 func Navbar(currentPath string, links []PageLink) g.Node {
-	return Div(
-		Nav(Class(&#34;bg-gray-700 mb-4&#34;),
-			Container(
-				Div(Class(&#34;flex items-center space-x-4 h-16&#34;),
-					NavbarLink(&#34;/&#34;, &#34;Home&#34;, currentPath == &#34;/&#34;),
+	return Nav(Class(&#34;bg-gray-700 mb-4&#34;),
+		Container(
+			Div(Class(&#34;flex items-center space-x-4 h-16&#34;),
+				NavbarLink(&#34;/&#34;, &#34;Home&#34;, currentPath == &#34;/&#34;),
 
-					// We can Map custom slices to Nodes
-					g.Group(g.Map(len(links), func(i int) g.Node {
-						return NavbarLink(links[i].Path, links[i].Name, currentPath == links[i].Path)
-					})),
-				),
+				// We can Map custom slices to Nodes
+				g.Group(g.Map(len(links), func(i int) g.Node {
+					return NavbarLink(links[i].Path, links[i].Name, currentPath == links[i].Path)
+				})),
 			),
 		),
 	)
