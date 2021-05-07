@@ -63,7 +63,7 @@ func IndexPage() g.Node {
 			CodeBlock(stripLines(navbar5, 8)),
 
 			H3(g.Text("It's all just Go")),
-			P(g.Text("Your editor helps you with auto-completion. It's type-safe. Nice formatting using gofmt. And all common HTML elements and attributes are included! And gomponents is open source, contributions are welcome.")),
+			P(g.Text("Your editor helps you with auto-completion. It's type-safe. Nice formatting using gofmt. And all common HTML elements and attributes are included!")),
 
 			H2(g.Text("Get started")),
 			BashBlock("$ go get -u github.com/maragudk/gomponents"),
