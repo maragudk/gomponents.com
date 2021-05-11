@@ -166,10 +166,10 @@ func Page(title, path string, body g.Node) g.Node {
 		Title:    title,
 		Language: &#34;en&#34;,
 		Head: []g.Node{
-			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/tailwindcss@^2.1.x/dist/base.min.css&#34;)),
-			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/tailwindcss@^2.1.x/dist/components.min.css&#34;)),
-			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css&#34;)),
-			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/tailwindcss@^2.1.x/dist/utilities.min.css&#34;)),
+			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/tailwindcss@2.1.2/dist/base.min.css&#34;)),
+			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/tailwindcss@2.1.2/dist/components.min.css&#34;)),
+			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/@tailwindcss/typography@0.4.0/dist/typography.min.css&#34;)),
+			Link(Rel(&#34;stylesheet&#34;), Href(&#34;https://unpkg.com/tailwindcss@2.1.2/dist/utilities.min.css&#34;)),
 		},
 		Body: []g.Node{
 			Navbar(path, []PageLink{
