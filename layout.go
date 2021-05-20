@@ -23,12 +23,13 @@ func Page(title, description, path string, body g.Node) g.Node {
 			Script(g.Raw("hljs.highlightAll();")),
 		},
 		Body: []g.Node{
+			Class("dark:bg-gray-900"),
 			Navbar(path),
 			Container(true,
 				Prose(
 					body,
 				),
-				Footer(Class("mt-32 prose prose-sm prose-indigo"),
+				Footer(Class("mt-32 prose dark:prose-light prose-sm prose-indigo"),
 					P(
 						g.Text("made in 🇩🇰 by "),
 						A(Href("https://www.maragu.dk"), g.Text("maragu")),
@@ -49,7 +50,7 @@ func Container(padY bool, children ...g.Node) g.Node {
 }
 
 func Navbar(path string) g.Node {
-	return Nav(Class("bg-gray-700 mb-6"),
+	return Nav(Class("bg-gray-700 dark:bg-gray-800 mb-6"),
 		Container(false,
 			Div(Class("flex items-center space-x-4 sm:space-x-6 lg:space-x-8 h-16"),
 				NavbarLink("/", "Home", path),
@@ -70,7 +71,7 @@ func NavbarLink(path, text, currentPath string) g.Node {
 }
 
 func Prose(children ...g.Node) g.Node {
-	return Div(Class("prose lg:prose-lg xl:prose-xl prose-indigo"), g.Group(children))
+	return Div(Class("prose dark:prose-light lg:prose-lg xl:prose-xl prose-indigo"), g.Group(children))
 }
 
 func CodeBlock(text string) g.Node {

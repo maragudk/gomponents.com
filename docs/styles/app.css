@@ -1276,6 +1276,93 @@ select {
 	outline: 2px solid transparent;
 	outline-offset: 2px;
 }
+@media (prefers-color-scheme: dark) {
+
+	.dark\:prose-light {
+		color: #9ca3af;
+	}
+
+	.dark\:prose-light [class~="lead"] {
+		color: #d1d5db;
+	}
+
+	.dark\:prose-light a {
+		color: #fff;
+	}
+
+	.dark\:prose-light strong {
+		color: #fff;
+	}
+
+	.dark\:prose-light ol > li::before {
+		color: #9ca3af;
+	}
+
+	.dark\:prose-light ul > li::before {
+		background-color: #4b5563;
+	}
+
+	.dark\:prose-light hr {
+		border-color: #e5e7eb;
+	}
+
+	.dark\:prose-light blockquote {
+		color: #e5e7eb;
+		border-left-color: #4b5563;
+	}
+
+	.dark\:prose-light h1 {
+		color: #fff;
+	}
+
+	.dark\:prose-light h2 {
+		color: #fff;
+	}
+
+	.dark\:prose-light h3 {
+		color: #fff;
+	}
+
+	.dark\:prose-light h4 {
+		color: #fff;
+	}
+
+	.dark\:prose-light figure figcaption {
+		color: #9ca3af;
+	}
+
+	.dark\:prose-light code {
+		color: #fff;
+	}
+
+	.dark\:prose-light a code {
+		color: #fff;
+	}
+
+	.dark\:prose-light pre {
+		color: #e5e7eb;
+		background-color: #1f2937;
+	}
+
+	.dark\:prose-light thead {
+		color: #fff;
+		border-bottom-color: #9ca3af;
+	}
+
+	.dark\:prose-light tbody tr {
+		border-bottom-color: #4b5563;
+	}
+
+	.dark\:bg-gray-900 {
+		--tw-bg-opacity: 1;
+		background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+	}
+
+	.dark\:bg-gray-800 {
+		--tw-bg-opacity: 1;
+		background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+	}
+}
 @media (min-width: 640px) {
 
 	.sm\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
