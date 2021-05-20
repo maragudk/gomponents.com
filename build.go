@@ -13,7 +13,8 @@ func main() {
 }
 
 var pages = map[string]g.Node{
-	"index.html": IndexPage(),
+	"index.html":      IndexPage(),
+	"plus/index.html": PlusPage(),
 }
 
 func build() int {

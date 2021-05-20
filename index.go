@@ -33,6 +33,7 @@ func IndexPage() g.Node {
 	return Page(
 		"gomponents, view components in pure Go",
 		"View components in pure Go, that render to HTML5.",
+		"/",
 
 		Div(
 			H1(g.Text("Tired of complex template languages?")),
