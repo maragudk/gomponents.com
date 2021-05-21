@@ -18,10 +18,10 @@ func PlusPage() g.Node {
 			P(Class("lead"), g.Text(`gomponents really shines if we build reusable components together. 🌟`)),
 			P(g.Raw(`Have you made a project with gomponents that other developers can use? <a href="https://github.com/maragudk/gomponents.com/issues/new">Create an issue on Github</a> and we can work together to add it here. 😎`)),
 
-			H2(g.Text(`gomponents + TailwindCSS`)),
+			H2(g.Text(`gomponents + TailwindCSS`), ID("tailwindcss")),
 			P(g.Raw(`gomponents works great together with <a href="https://tailwindcss.com">TailwindCSS</a>. In fact, this page is built using gomponents and TailwindCSS! Check out <a href="https://github.com/maragudk/gomponents.com">the source of this page</a> or <a href="https://github.com/maragudk/gomponents-tailwind-example">a gomponents + TailwindCSS example project</a>.`)),
 
-			H2(g.Text(`gomponents + Heroicons`)),
+			H2(g.Text(`gomponents + Heroicons`), ID("heroicons")),
 			P(g.Raw(`<a href="https://heroicons.com">Heroicons</a> are a collection of handcrafted SVG icons, by the makers of TailwindCSS. They work great together with gomponents! Check out <a href="https://github.com/maragudk/gomponents-heroicons">the gomponents-heroicons library on Github</a>.`)),
 		),
 	)
