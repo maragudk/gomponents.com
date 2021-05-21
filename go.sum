@@ -1,2 +1,4 @@
 github.com/maragudk/gomponents v0.16.0 h1:qoFF52ePoX27b6uvLGfGNcIfN/F6NSg9YCtqoipBXuM=
 github.com/maragudk/gomponents v0.16.0/go.mod h1:0OdlqOoqxcwvhBFrp8wlKHnEXhNB7IVhb8GuARmd+tI=
+github.com/maragudk/gomponents-heroicons v0.2.0 h1:yuzgZZRN6vZCAi/jVIi0s0dEHsAGhnHX7SwFG2wuo2M=
+github.com/maragudk/gomponents-heroicons v0.2.0/go.mod h1:Nn6gUKiPrXyWvo9gu+q8dT1RhwYO0SQTMobEPzoXNX4=
