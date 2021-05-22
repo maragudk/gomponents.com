@@ -23,7 +23,7 @@ func PlusPage() g.Node {
 		Div(
 			H1(g.Text("gomponents +")),
 			P(Class("lead"), g.Text(`Let's build reusable components together. 🌟`)),
-			P(g.Raw(`Have you made a project with gomponents that other developers can use? <a href="https://github.com/maragudk/gomponents.com/issues/new">Create an issue on Github</a> and we can work together to add it here. 😎`)),
+			P(g.Raw(`Have you built something with gomponents that other developers can use? <a href="https://github.com/maragudk/gomponents.com/issues/new">Create an issue on Github</a> and we can work together to add it here. 😎`)),
 
 			Headline2(`TailwindCSS`, `tailwindcss`),
 			P(g.Raw(`gomponents works great together with <a href="https://tailwindcss.com">TailwindCSS</a>. In fact, this page is built using gomponents and TailwindCSS! Check out <a href="https://github.com/maragudk/gomponents.com">the source of this page</a> or <a href="https://github.com/maragudk/gomponents-tailwind-example">a gomponents + TailwindCSS example project</a>.`)),
