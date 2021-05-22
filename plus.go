@@ -17,12 +17,12 @@ var heroicons string
 func PlusPage() g.Node {
 	return Page(
 		"gomponents +",
-		"gomponents really shines if we start building reusable components together. Add yours here!",
+		"Let's build reusable components together. Add yours here!",
 		"/plus/",
 
 		Div(
 			H1(g.Text("gomponents +")),
-			P(Class("lead"), g.Text(`gomponents really shines if we build reusable components together. 🌟`)),
+			P(Class("lead"), g.Text(`Let's build reusable components together. 🌟`)),
 			P(g.Raw(`Have you made a project with gomponents that other developers can use? <a href="https://github.com/maragudk/gomponents.com/issues/new">Create an issue on Github</a> and we can work together to add it here. 😎`)),
 
 			Headline2(`TailwindCSS`, `tailwindcss`),
