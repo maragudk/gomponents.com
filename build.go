@@ -13,8 +13,9 @@ func main() {
 }
 
 var pages = map[string]g.Node{
-	"index.html":      IndexPage(),
-	"plus/index.html": PlusPage(),
+	"index.html":          IndexPage(),
+	"plus/index.html":     PlusPage(),
+	"mentions/index.html": MentionsPage(),
 }
 
 func build() int {
