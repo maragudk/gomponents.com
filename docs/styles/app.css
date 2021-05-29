@@ -1778,6 +1778,14 @@ select {
 		margin-bottom: 0;
 	}
 
+	.sm\:prose-indigo a {
+		color: #4f46e5;
+	}
+
+	.sm\:prose-indigo a code {
+		color: #4f46e5;
+	}
+
 	.sm\:h-32 {
 		height: 8rem;
 	}
