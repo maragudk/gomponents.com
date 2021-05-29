@@ -29,6 +29,7 @@ func Page(title, description, baseURL, path string, body g.Node) g.Node {
 			Class("dark:bg-gray-900"),
 			Navbar(path),
 			Container(true,
+				Img(Src("/images/logo.png"), Class("float-right hidden lg:inline-block h-64 w-auto")),
 				Prose(
 					body,
 				),
