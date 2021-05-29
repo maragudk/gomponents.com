@@ -1805,6 +1805,135 @@ select {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
 	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light {
+			color: #9ca3af;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light [class~="lead"] {
+			color: #d1d5db;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light a {
+			color: #fff;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light strong {
+			color: #fff;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light ol > li::before {
+			color: #9ca3af;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light ul > li::before {
+			background-color: #4b5563;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light hr {
+			border-color: #e5e7eb;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light blockquote {
+			color: #e5e7eb;
+			border-left-color: #4b5563;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light h1 {
+			color: #fff;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light h2 {
+			color: #fff;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light h3 {
+			color: #fff;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light h4 {
+			color: #fff;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light figure figcaption {
+			color: #9ca3af;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light code {
+			color: #fff;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light a code {
+			color: #fff;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light pre {
+			color: #e5e7eb;
+			background-color: #1f2937;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light thead {
+			color: #fff;
+			border-bottom-color: #9ca3af;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.sm\:dark\:prose-light tbody tr {
+			border-bottom-color: #4b5563;
+		}
+	}
 }
 @media (min-width: 1024px) {
 

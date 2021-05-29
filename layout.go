@@ -77,7 +77,7 @@ func NavbarLink(path, text, currentPath string) g.Node {
 }
 
 func Prose(children ...g.Node) g.Node {
-	return Div(Class("prose dark:prose-light prose-sm sm:prose lg:prose-lg xl:prose-xl prose-indigo sm:prose-indigo"), g.Group(children))
+	return Div(Class("prose dark:prose-light prose-sm sm:prose sm:dark:prose-light sm:prose-indigo lg:prose-lg xl:prose-xl prose-indigo"), g.Group(children))
 }
 
 func CodeBlock(text string) g.Node {
