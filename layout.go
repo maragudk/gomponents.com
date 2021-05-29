@@ -29,8 +29,9 @@ func Page(title, description, baseURL, path string, body g.Node) g.Node {
 			Class("dark:bg-gray-900"),
 			Navbar(path),
 			Container(true,
-				Img(Src("/images/logo.png"), Class("float-right hidden lg:inline-block h-64 w-auto")),
+				Img(Src("/images/logo.png"), Alt("Gopher logo"), Class("hidden h-64 w-auto float-right lg:block")),
 				Prose(
+					Img(Src("/images/logo.png"), Alt("Gopher logo"), Class("h-24 sm:h-32 w-auto float-right lg:hidden")),
 					body,
 				),
 				Footer(Class("mt-32 prose dark:prose-light prose-sm prose-indigo"),
@@ -75,7 +76,7 @@ func NavbarLink(path, text, currentPath string) g.Node {
 }
 
 func Prose(children ...g.Node) g.Node {
-	return Div(Class("prose dark:prose-light lg:prose-lg xl:prose-xl prose-indigo"), g.Group(children))
+	return Div(Class("prose dark:prose-light prose-sm sm:prose lg:prose-lg xl:prose-xl prose-indigo"), g.Group(children))
 }
 
 func CodeBlock(text string) g.Node {
