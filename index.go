@@ -41,7 +41,11 @@ func IndexPage() g.Node {
 			H2(g.Text("Try view components in pure Go.")),
 			P(Class("lead"), g.Raw(`<em>gomponents</em> are view components in pure Go. They render to HTML 5, and make it easy for you to build reusable components. So you can focus on building your app instead of learning yet another templating language.`)),
 			BashBlock("$ go get -u github.com/maragudk/gomponents"),
-			P(A(Href("https://github.com/maragudk/gomponents"), g.Text("See gomponents on Github"))),
+			P(
+				A(Href("https://github.com/maragudk/gomponents"), g.Text("See gomponents on Github")),
+				g.Text(", or "),
+				A(Href("https://twitter.com/intent/tweet?text=Check%20out%20this%20view%20component%20library%20in%20pure%20Go&url=https%3A%2F%2Fwww.gomponents.com&hashtags=golang&via=markusrgw"), g.Text("share on Twitter if you're feeling helpful")),
+			),
 
 			H3(g.Text("Components are just functions")),
 			P(g.Text("Have a look at this component. If you know HTML, you know what it does. Easy, right?")),
