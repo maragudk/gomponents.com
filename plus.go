@@ -18,6 +18,7 @@ func PlusPage() g.Node {
 	return Page(
 		"gomponents +",
 		"Let's build reusable components together. Add yours here!",
+		"https://www.gomponents.com",
 		"/plus/",
 
 		Div(

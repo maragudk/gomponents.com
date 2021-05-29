@@ -11,7 +11,7 @@ type PageProps struct {
 	Body  g.Node
 }
 
-func Page(title, description, path string, body g.Node) g.Node {
+func Page(title, description, baseURL, path string, body g.Node) g.Node {
 	return c.HTML5(c.HTML5Props{
 		Title:       title,
 		Description: description,
@@ -21,6 +21,9 @@ func Page(title, description, path string, body g.Node) g.Node {
 			Link(Rel("stylesheet"), Href("/styles/highlightjs.min.css"), Type("text/css")),
 			Script(Src("/scripts/highlight.min.js")),
 			Script(g.Raw("hljs.highlightAll();")),
+			FavIcons(),
+			OpenGraph(title, description, baseURL+"/images/logo.png", baseURL+path),
+			TwitterCard(),
 		},
 		Body: []g.Node{
 			Class("dark:bg-gray-900"),
@@ -80,4 +83,34 @@ func CodeBlock(text string) g.Node {
 
 func BashBlock(text string) g.Node {
 	return Pre(Code(Class("language-bash"), g.Text(text)))
+}
+
+func FavIcons() g.Node {
+	return g.Group([]g.Node{
+		Link(Rel("apple-touch-icon"), g.Attr("sizes", "180x180"), Href("/apple-touch-icon.png")),
+		Link(Rel("icon"), Type("image/png"), g.Attr("sizes", "32x32"), Href("/favicon-32x32.png")),
+		Link(Rel("icon"), Type("image/png"), g.Attr("sizes", "16x16"), Href("/favicon-16x16.png")),
+		Link(Rel("manifest"), Href("/manifest.json")),
+		Link(Rel("mask-icon"), Href("/safari-pinned-tab.svg"), g.Attr("color", "#000000")),
+		Meta(Name("msapplication-TileColor"), Content("#ffffff")),
+		Meta(Name("theme-color"), Content("#ffffff")),
+	})
+}
+
+func OpenGraph(title, description, image, url string) g.Node {
+	return g.Group([]g.Node{
+		Meta(g.Attr("property", "og:type"), Content("website")),
+		Meta(g.Attr("property", "og:title"), Content(title)),
+		g.If(description != "", Meta(g.Attr("property", "og:description"), Content(description))),
+		g.If(image != "", Meta(g.Attr("property", "og:image"), Content(image))),
+		g.If(url != "", Meta(g.Attr("property", "og:url"), Content(url))),
+	})
+}
+
+func TwitterCard() g.Node {
+	return g.Group([]g.Node{
+		Meta(Name("twitter:card"), Content("summary")),
+		Meta(Name("twitter:site"), Content("@markusrgw")),
+		Meta(Name("twitter:creator"), Content("@markusrgw")),
+	})
 }
