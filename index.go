@@ -83,7 +83,13 @@ func IndexPage() g.Node {
 			),
 			CodeBlock(simpleExample),
 
-			P(g.Text("See "), A(Href("https://github.com/maragudk/gomponents"), g.Text("the Github repository")), g.Text(" for more.")),
+			P(
+				g.Text("See also "),
+				A(Href("https://github.com/maragudk/gomponents"), g.Text("the Github repository")),
+				g.Text(" or "),
+				A(Href("https://www.maragu.dk/blog/gomponents-declarative-view-components-in-go/"), g.Text("the blog post that started it all")),
+				g.Text("."),
+			),
 		),
 	)
 }
