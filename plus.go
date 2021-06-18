@@ -15,6 +15,28 @@ var tailwindcss string
 var heroicons string
 
 func PlusPage() g.Node {
+	type section struct {
+		title string
+		id    string
+		body  g.Node
+	}
+	sections := []section{
+		{
+			title: `TailwindCSS`, id: `tailwindcss`, body: Div(
+				P(g.Raw(`gomponents works great together with <a href="https://tailwindcss.com">TailwindCSS</a>. In fact, this page is built using gomponents and TailwindCSS! Check out <a href="https://github.com/maragudk/gomponents.com">the source of this page</a> or <a href="https://github.com/maragudk/gomponents-tailwind-example">a gomponents + TailwindCSS example project</a>.`)),
+				H3(g.Text(`Example`)),
+				CodeBlock(tailwindcss),
+			),
+		},
+		{
+			title: `Heroicons`, id: `heroicons`, body: Div(
+				P(g.Raw(`<a href="https://heroicons.com">Heroicons</a> are a collection of handcrafted SVG icons, by the makers of TailwindCSS. They work great together with gomponents! Check out <a href="https://github.com/maragudk/gomponents-heroicons">the gomponents-heroicons library on Github</a>.`)),
+				H3(g.Text(`Example`)),
+				CodeBlock(heroicons),
+			),
+		},
+	}
+
 	return Page(
 		"gomponents +",
 		"Let's build reusable components together. Add yours here!",
@@ -26,15 +48,19 @@ func PlusPage() g.Node {
 			P(Class("lead"), g.Text(`Let's build reusable components together. 🌟`)),
 			P(g.Raw(`Have you built something with gomponents that other developers can use? <a href="https://github.com/maragudk/gomponents.com/issues/new">Create an issue on Github</a> and we can work together to add it here. 😎`)),
 
-			Headline2(`TailwindCSS`, `tailwindcss`),
-			P(g.Raw(`gomponents works great together with <a href="https://tailwindcss.com">TailwindCSS</a>. In fact, this page is built using gomponents and TailwindCSS! Check out <a href="https://github.com/maragudk/gomponents.com">the source of this page</a> or <a href="https://github.com/maragudk/gomponents-tailwind-example">a gomponents + TailwindCSS example project</a>.`)),
-			H3(g.Text(`Example`)),
-			CodeBlock(tailwindcss),
+			P(g.Text("Jump to:")),
+			Ul(
+				g.Group(g.Map(len(sections), func(i int) g.Node {
+					return Li(A(Href("#"+sections[i].id), g.Text(sections[i].title)))
+				})),
+			),
 
-			Headline2(`Heroicons`, `heroicons`),
-			P(g.Raw(`<a href="https://heroicons.com">Heroicons</a> are a collection of handcrafted SVG icons, by the makers of TailwindCSS. They work great together with gomponents! Check out <a href="https://github.com/maragudk/gomponents-heroicons">the gomponents-heroicons library on Github</a>.`)),
-			H3(g.Text(`Example`)),
-			CodeBlock(heroicons),
+			g.Group(g.Map(len(sections), func(i int) g.Node {
+				return Div(
+					Headline2(sections[i].title, sections[i].id),
+					sections[i].body,
+				)
+			})),
 		),
 	)
 }
