@@ -1,7 +1,7 @@
 .PHONY: build build-css lint watch-css
 
 build: build-css
-	go run *.go
+	go run .
 
 build-css:
 	NODE_ENV=production ./node_modules/.bin/postcss build tailwind.css -o docs/styles/app.css

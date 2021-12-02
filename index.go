@@ -43,8 +43,6 @@ func IndexPage() g.Node {
 			BashBlock("$ go get -u github.com/maragudk/gomponents"),
 			P(
 				A(Href("https://github.com/maragudk/gomponents"), g.Text("See gomponents on Github")),
-				g.Text(", or "),
-				A(Href("https://twitter.com/intent/tweet?text=Check%20out%20this%20view%20component%20library%20in%20pure%20Go&url=https%3A%2F%2Fwww.gomponents.com&hashtags=golang&via=markusrgw"), g.Text("share on Twitter if you're feeling helpful")),
 			),
 
 			H3(g.Text("Components are just functions")),
