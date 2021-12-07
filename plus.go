@@ -46,7 +46,7 @@ func PlusPage() g.Node {
 		Div(
 			H1(g.Text("gomponents +")),
 			P(Class("lead"), g.Text(`Let's build reusable components together. 🌟`)),
-			P(g.Raw(`Have you built something with gomponents that other developers can use? <a href="https://github.com/maragudk/gomponents.com/issues/new">Create an issue on Github</a> and we can work together to add it here. 😎`)),
+			P(g.Raw(`Have you built gomponents that other developers can use? <a href="https://github.com/maragudk/gomponents.com/issues/new">Create an issue on Github</a> and let's add them here. 😎`)),
 
 			P(g.Text("Jump to:")),
 			Ul(
