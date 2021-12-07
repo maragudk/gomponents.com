@@ -1,4 +1,4 @@
-package icons
+package main
 
 import (
 	g "github.com/maragudk/gomponents"

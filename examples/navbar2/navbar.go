@@ -6,7 +6,7 @@ import (
 )
 
 func Navbar(loggedIn bool) g.Node {
-	return Nav(Class("main-nav"),
+	return Nav(Class("navbar"),
 		Ol(
 			NavbarItem("Home", "/"),
 			NavbarItem("Contact", "/contact"),

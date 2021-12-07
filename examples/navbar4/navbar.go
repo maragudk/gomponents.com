@@ -12,7 +12,7 @@ type NavLink struct {
 }
 
 func Navbar(loggedIn bool, links []NavLink, currentPath string) g.Node {
-	return Nav(Class("main-nav"),
+	return Nav(Class("navbar"),
 		Ol(
 			g.Group(g.Map(len(links), func(i int) g.Node {
 				return NavbarItem(links[i].Name, links[i].Path, links[i].Path == currentPath)
@@ -27,8 +27,8 @@ func Navbar(loggedIn bool, links []NavLink, currentPath string) g.Node {
 
 func NavbarItem(name, path string, active bool) g.Node {
 	return Li(A(Href(path), g.Text(name)), c.Classes{
-		"nav-item": true,
-		"active":   active,
-		"inactive": !active,
+		"navbar-item": true,
+		"active":      active,
+		"inactive":    !active,
 	})
 }

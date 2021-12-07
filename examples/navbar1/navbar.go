@@ -6,7 +6,7 @@ import (
 )
 
 func Navbar() g.Node {
-	return Nav(Class("main-nav"),
+	return Nav(Class("navbar"),
 		Ol(
 			Li(A(Href("/"), g.Text("Home"))),
 			Li(A(Href("/contact"), g.Text("Contact"))),
