@@ -19,6 +19,7 @@ func Page(title, description, baseURL, path string, body g.Node) g.Node {
 		Head: []g.Node{
 			Link(Rel("stylesheet"), Href("/styles/app.css"), Type("text/css")),
 			Link(Rel("stylesheet"), Href("/styles/highlightjs.min.css"), Type("text/css")),
+			Script(Src("https://cdn.usefathom.com/script.js"), DataAttr("site", "MOGDWGQV"), Defer()),
 			Script(Src("/scripts/highlight.min.js")),
 			Script(g.Raw("hljs.highlightAll();")),
 			FavIcons(),
