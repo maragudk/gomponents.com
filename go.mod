@@ -1,8 +1,8 @@
 module gomponents.com
 
-go 1.17
+go 1.18
 
 require (
-	github.com/maragudk/gomponents v0.18.0
-	github.com/maragudk/gomponents-heroicons v0.3.0
+	github.com/maragudk/gomponents v0.19.0
+	github.com/maragudk/gomponents-heroicons v0.4.0
 )
