@@ -45,8 +45,8 @@ func NavbarItem(name, path string) g.Node {
 func Navbar(loggedIn bool, links []NavLink) g.Node {
 	return Nav(Class(&#34;navbar&#34;),
 		Ol(
-			g.Group(g.Map(len(links), func(i int) g.Node {
-				return NavbarItem(links[i].Name, links[i].Path)
+			g.Group(g.Map(links, func(l NavLink) g.Node {
+				return NavbarItem(l.Name, l.Path)
 			})),
 
 			g.If(loggedIn,
@@ -67,8 +67,8 @@ func NavbarItem(name, path string) g.Node {
 func Navbar(loggedIn bool, links []NavLink, currentPath string) g.Node {
 	return Nav(Class(&#34;navbar&#34;),
 		Ol(
-			g.Group(g.Map(len(links), func(i int) g.Node {
-				return NavbarItem(links[i].Name, links[i].Path, links[i].Path == currentPath)
+			g.Group(g.Map(links, func(l NavLink) g.Node {
+				return NavbarItem(l.Name, l.Path, l.Path == currentPath)
 			})),
 
 			g.If(loggedIn,
@@ -95,8 +95,8 @@ func Navbar(loggedIn bool, links []NavLink, currentPath string) g.Node {
 		Ol(
 			g.Raw(`&lt;span class=&#34;logo&#34;&gt;&lt;img src=&#34;logo.png&gt;&lt;/span&gt;&#34;`),
 
-			g.Group(g.Map(len(links), func(i int) g.Node {
-				return NavbarItem(links[i].Name, links[i].Path, links[i].Path == currentPath)
+			g.Group(g.Map(links, func(l NavLink) g.Node {
+				return NavbarItem(l.Name, l.Path, l.Path == currentPath)
 			})),
 
 			g.If(loggedIn,
@@ -196,8 +196,8 @@ func Navbar(currentPath string, links []PageLink) g.Node {
 				NavbarLink(&#34;/&#34;, &#34;Home&#34;, currentPath == &#34;/&#34;),
 
 				// We can Map custom slices to Nodes
-				g.Group(g.Map(len(links), func(i int) g.Node {
-					return NavbarLink(links[i].Path, links[i].Name, currentPath == links[i].Path)
+				g.Group(g.Map(links, func(l PageLink) g.Node {
+					return NavbarLink(l.Path, l.Name, currentPath == l.Path)
 				})),
 			),
 		),
