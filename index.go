@@ -45,6 +45,12 @@ func IndexPage() g.Node {
 				A(Href("https://github.com/maragudk/gomponents"), g.Text("See gomponents on Github")),
 			),
 
+			H3(g.Text("Video introduction")),
+
+			P(g.Raw(`Into video? See this lightning talk from GopherCon 2021.`)),
+
+			g.Raw(`<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5XiewS8ZbH8?start=570" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`),
+
 			H3(g.Text("Components are just functions")),
 			P(g.Text("Have a look at this component. If you know HTML, you know what it does. Easy, right?")),
 			CodeBlock(stripLines(navbar1, 7)),
