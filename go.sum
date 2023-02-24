@@ -1,4 +1,5 @@
-github.com/maragudk/gomponents v0.18.0 h1:EcdeRUWsWW6hK9ftnGAoyXR00SQWecCBxuXghQvdEcc=
-github.com/maragudk/gomponents v0.18.0/go.mod h1:0OdlqOoqxcwvhBFrp8wlKHnEXhNB7IVhb8GuARmd+tI=
-github.com/maragudk/gomponents-heroicons v0.3.0 h1:/1gmosQE3bh5ZExxBojbSHLG09tg6oW3+QB7GD6eDec=
-github.com/maragudk/gomponents-heroicons v0.3.0/go.mod h1:neB/SXe/CqtjveyXr1M1UneHKn3UkplNoKJPOLM0JHU=
+github.com/maragudk/gomponents v0.20.0/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
+github.com/maragudk/gomponents v0.20.1 h1:TeJY1fXEcfUvzmvjeUgxol42dvkYMggK1c0V67crWWs=
+github.com/maragudk/gomponents v0.20.1/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
+github.com/maragudk/gomponents-heroicons v0.5.0 h1:R1hSNSAK4lynFHZA3ycHkIfBugEfNI0uz43WRa5+Lqo=
+github.com/maragudk/gomponents-heroicons v0.5.0/go.mod h1:BdJ7d+F4fa2wDNO6ZQ1eeVHv6GumZzek2xEBI6FIsDM=

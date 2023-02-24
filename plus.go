@@ -50,15 +50,15 @@ func PlusPage() g.Node {
 
 			P(g.Text("Jump to:")),
 			Ul(
-				g.Group(g.Map(len(sections), func(i int) g.Node {
-					return Li(A(Href("#"+sections[i].id), g.Text(sections[i].title)))
+				g.Group(g.Map(sections, func(s section) g.Node {
+					return Li(A(Href("#"+s.id), g.Text(s.title)))
 				})),
 			),
 
-			g.Group(g.Map(len(sections), func(i int) g.Node {
+			g.Group(g.Map(sections, func(s section) g.Node {
 				return Div(
-					Headline2(sections[i].title, sections[i].id),
-					sections[i].body,
+					Headline2(s.title, s.id),
+					s.body,
 				)
 			})),
 		),

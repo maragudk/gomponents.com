@@ -1,13 +1,20 @@
-.PHONY: build build-css lint watch-css
-
+.PHONY: build
 build: build-css
 	go run .
 
-build-css:
-	NODE_ENV=production ./node_modules/.bin/postcss build tailwind.css -o docs/styles/app.css
+.PHONY: build-css
+build-css: tailwindcss
+	./tailwindcss -i tailwind.css -o docs/styles/app.css --minify
 
+.PHONY: lint
 lint:
 	golangci-lint run
 
-watch-css:
-	NODE_ENV=development ./node_modules/.bin/postcss build tailwind.css -o docs/styles/app.css -w
+tailwindcss:
+	curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
+	chmod +x tailwindcss-macos-arm64
+	mv tailwindcss-macos-arm64 tailwindcss
+
+.PHONY: watch-css
+watch-css: tailwindcss
+	./tailwindcss -i tailwind.css -o docs/styles/app.css --watch
