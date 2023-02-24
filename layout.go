@@ -18,10 +18,9 @@ func Page(title, description, baseURL, path string, body g.Node) g.Node {
 		Language:    "en",
 		Head: []g.Node{
 			Link(Rel("stylesheet"), Href("/styles/app.css"), Type("text/css")),
-			Link(Rel("stylesheet"), Href("/styles/highlightjs.min.css"), Type("text/css")),
+			Link(Rel("stylesheet"), Href("/styles/prism.css"), Type("text/css")),
 			Script(Src("https://engaging-classical.gomponents.com/script.js"), DataAttr("site", "MOGDWGQV"), Defer()),
-			Script(Src("/scripts/highlight.min.js")),
-			Script(g.Raw("hljs.highlightAll();")),
+			Script(Src("/scripts/prism.js")),
 			FavIcons(),
 			OpenGraph(title, description, baseURL+"/images/logo.png", baseURL+path),
 			TwitterCard(),
