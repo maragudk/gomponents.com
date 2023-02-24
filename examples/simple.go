@@ -1,6 +1,8 @@
 package main
 
 import (
+	"errors"
+	"log"
 	"net/http"
 	"time"
 
@@ -14,7 +16,9 @@ func main() {
 	http.Handle("/contact", createHandler(contactPage()))
 	http.Handle("/about", createHandler(aboutPage()))
 
-	_ = http.ListenAndServe("localhost:8080", nil)
+	if err := http.ListenAndServe("localhost:8081", nil); err != nil && !errors.Is(err, http.ErrServerClosed) {
+		log.Println("Error:", err)
+	}
 }
 
 func createHandler(title string, body g.Node) http.HandlerFunc {
@@ -51,10 +55,7 @@ func Page(title, path string, body g.Node) g.Node {
 		Title:    title,
 		Language: "en",
 		Head: []g.Node{
-			Link(Rel("stylesheet"), Href("https://unpkg.com/tailwindcss@2.1.2/dist/base.min.css")),
-			Link(Rel("stylesheet"), Href("https://unpkg.com/tailwindcss@2.1.2/dist/components.min.css")),
-			Link(Rel("stylesheet"), Href("https://unpkg.com/@tailwindcss/typography@0.4.0/dist/typography.min.css")),
-			Link(Rel("stylesheet"), Href("https://unpkg.com/tailwindcss@2.1.2/dist/utilities.min.css")),
+			Script(Src("https://cdn.tailwindcss.com?plugins=typography")),
 		},
 		Body: []g.Node{
 			Navbar(path, []PageLink{
@@ -81,8 +82,8 @@ func Navbar(currentPath string, links []PageLink) g.Node {
 				NavbarLink("/", "Home", currentPath == "/"),
 
 				// We can Map custom slices to Nodes
-				g.Group(g.Map(len(links), func(i int) g.Node {
-					return NavbarLink(links[i].Path, links[i].Name, currentPath == links[i].Path)
+				g.Group(g.Map(links, func(l PageLink) g.Node {
+					return NavbarLink(l.Path, l.Name, currentPath == l.Path)
 				})),
 			),
 		),
