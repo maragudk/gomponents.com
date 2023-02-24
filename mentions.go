@@ -26,6 +26,7 @@ func MentionsPage() g.Node {
 			Ul(
 				Li(A(Href("https://www.yellowduck.be/posts/building-view-components-with-go-and-tailwind-css/"), g.Text(`"Building view components with Go and Tailwind CSS" on yellowduck.be`))),
 				Li(A(Href("https://golangweekly.com/issues/361"), g.Text("Golang Weekly Issue #361"))),
+				Li(A(Href("https://goingwithgo.com/2023/02/building-reusable-web-view-components-in-pure-go-markus-wustenberg/"), g.Text(`"Building Reusable Web View Components in Pure Go: Markus Wüstenberg" on goingwithgo.com`))),
 			),
 		),
 	)
