@@ -16,8 +16,8 @@ func Navbar(loggedIn bool, links []NavLink, currentPath string) g.Node {
 		Ol(
 			g.Raw(`<span class="logo"><img src="logo.png></span>"`),
 
-			g.Group(g.Map(len(links), func(i int) g.Node {
-				return NavbarItem(links[i].Name, links[i].Path, links[i].Path == currentPath)
+			g.Group(g.Map(links, func(l NavLink) g.Node {
+				return NavbarItem(l.Name, l.Path, l.Path == currentPath)
 			})),
 
 			g.If(loggedIn,
