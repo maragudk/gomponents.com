@@ -4,7 +4,7 @@ build: build-css
 
 .PHONY: build-css
 build-css: tailwindcss
-	./tailwindcss -i tailwind.css -o views/public/styles/app.css --minify
+	./tailwindcss -i tailwind.css -o docs/styles/app.css --minify
 
 .PHONY: lint
 lint:
@@ -17,4 +17,4 @@ tailwindcss:
 
 .PHONY: watch-css
 watch-css: tailwindcss
-	./tailwindcss -i tailwind.css -o views/public/styles/app.css --watch
+	./tailwindcss -i tailwind.css -o docs/styles/app.css --watch
