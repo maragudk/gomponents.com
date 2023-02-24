@@ -14,6 +14,9 @@ var tailwindcss string
 //go:embed examples/heroicons/heroicons.go
 var heroicons string
 
+//go:embed examples/htmx/htmx.go
+var htmx string
+
 func PlusPage() g.Node {
 	type section struct {
 		title string
@@ -26,6 +29,13 @@ func PlusPage() g.Node {
 				P(g.Raw(`gomponents works great together with <a href="https://tailwindcss.com">TailwindCSS</a>. In fact, this page is built using gomponents and TailwindCSS! Check out <a href="https://github.com/maragudk/gomponents.com">the source of this page</a> or <a href="https://github.com/maragudk/gomponents-tailwind-example">a gomponents + TailwindCSS example project</a>.`)),
 				H3(g.Text(`Example`)),
 				CodeBlock(tailwindcss),
+			),
+		},
+		{
+			title: "HTMX", id: "htmx", body: Div(
+				P(g.Raw(`<a href="https://htmx.org">HTMX</a> is a tiny Javascript library to give access to AJAX, websockets, and more, using HTML attributes. This fits perfectly with gomponents when you need that extra bit of client-side interactivity. Check out <a href="https://github.com/maragudk/gomponents-htmx">the gomponents-htmx library on Github</a>.`)),
+				H3(g.Text(`Example`)),
+				CodeBlock(htmx),
 			),
 		},
 		{
