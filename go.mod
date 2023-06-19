@@ -8,3 +8,5 @@ require (
 )
 
 require github.com/maragudk/gomponents-htmx v0.2.0
+
+require github.com/delaneyj/gomponents-iconify v0.0.0-20230611230628-e1005a1b979f

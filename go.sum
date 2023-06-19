@@ -1,3 +1,5 @@
+github.com/delaneyj/gomponents-iconify v0.0.0-20230611230628-e1005a1b979f h1:v58hcXmvUIf5B0rYIYqBLdRzR3WNTODvz4fM2vsH9+I=
+github.com/delaneyj/gomponents-iconify v0.0.0-20230611230628-e1005a1b979f/go.mod h1:ZjIP4npWKmVuJbvSjBTpzSl1QMimELl77gP/leg1bnI=
 github.com/maragudk/gomponents v0.20.0/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
 github.com/maragudk/gomponents v0.20.1 h1:TeJY1fXEcfUvzmvjeUgxol42dvkYMggK1c0V67crWWs=
 github.com/maragudk/gomponents v0.20.1/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
