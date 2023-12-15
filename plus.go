@@ -32,6 +32,9 @@ func PlusPage() g.Node {
 				P(g.Raw(`gomponents works great together with <a href="https://tailwindcss.com">TailwindCSS</a>. In fact, this page is built using gomponents and TailwindCSS! Check out <a href="https://github.com/maragudk/gomponents.com">the source of this page</a> or <a href="https://github.com/maragudk/gomponents-tailwind-example">a gomponents + TailwindCSS example project</a>.`)),
 				H3(g.Text(`Example`)),
 				CodeBlock(tailwindcss),
+				H3(g.Text(`Tailwind CSS IntelliSense`)),
+				P(g.Raw(`If you're using VS Code, you can get Tailwind CSS IntelliSense <a href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss">by installing the following extension.</a> Then add the following to your <code>.vscode/settings.json</code> file to get the IntelliSense integrated with gomponents.`)),
+				g.Raw(`<script src="https://gist.github.com/eduardolat/438a1de077ccac6b9792153e708c1824.js"></script>`),
 			),
 		},
 		{
