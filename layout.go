@@ -19,7 +19,7 @@ func Page(title, description, baseURL, path string, body g.Node) g.Node {
 		Head: []g.Node{
 			Link(Rel("stylesheet"), Href("/styles/app.css"), Type("text/css")),
 			Link(Rel("stylesheet"), Href("/styles/prism.css"), Type("text/css")),
-			Script(Src("https://engaging-classical.gomponents.com/script.js"), DataAttr("site", "MOGDWGQV"), Defer()),
+			Script(Src("https://cdn.usefathom.com/script.js"), DataAttr("site", "MOGDWGQV"), Defer()),
 			Script(Src("/scripts/prism.js")),
 			FavIcons(),
 			OpenGraph(title, description, baseURL+"/images/logo.png", baseURL+path),

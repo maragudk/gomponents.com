@@ -31,18 +31,20 @@ var navbar5 string
 
 func IndexPage() g.Node {
 	return Page(
-		"gomponents, view components in pure Go",
-		"View components in pure Go, that render to HTML5.",
+		"gomponents, HTML components in pure Go",
+		"HTML components in pure Go, that render to HTML5.",
 		"https://www.gomponents.com",
 		"/",
 
 		Div(
 			H1(g.Text("Tired of complex template languages?")),
-			H2(g.Text("Try view components in pure Go.")),
-			P(Class("lead"), g.Raw(`<em>gomponents</em> are view components in pure Go. They render to HTML 5, and make it easy for you to build reusable components. So you can focus on building your app instead of learning yet another templating language.`)),
+			H2(g.Text("Try HTML components in pure Go.")),
+			P(Class("lead"), g.Raw(`<em>gomponents</em> are HTML components in pure Go. They render to HTML 5, and make it easy for you to build reusable components. So you can focus on building your app instead of learning yet another templating language.`)),
 			BashBlock("$ go get github.com/maragudk/gomponents"),
 			P(
 				A(Href("https://github.com/maragudk/gomponents"), g.Text("See gomponents on Github")),
+				g.Text(" or "),
+				A(Href("https://maragu.gumroad.com/l/gomponents"), g.Text("buy the Official gomponents <marquee> Element 🤯🤩")),
 			),
 
 			H3(g.Text("Video introduction")),
@@ -93,6 +95,9 @@ func IndexPage() g.Node {
 				g.Text(" or "),
 				A(Href("https://www.maragu.dk/blog/gomponents-declarative-view-components-in-go/"), g.Text("the blog post that started it all")),
 				g.Text("."),
+			),
+			P(
+				A(Href("https://maragu.gumroad.com/l/gomponents"), g.Text("Buy the Official gomponents <marquee> Element here!")),
 			),
 		),
 	)
