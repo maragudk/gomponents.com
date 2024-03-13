@@ -37,6 +37,11 @@ func PlusPage() g.Node {
 			),
 		},
 		{
+			title: `Bulma`, id: `bulma`, body: Div(
+				P(g.Raw(`gomponents and <a href="https://bulma.io">Bulma</a> also go well together. Check out <a href="https://willoma.github.io/bulma-gomponents/">bulma-gomponents</a> by <a href="https://github.com/willoma">willoma</a> for easy integration.`)),
+			),
+		},
+		{
 			title: "HTMX", id: "htmx", body: Div(
 				P(g.Raw(`<a href="https://htmx.org">HTMX</a> is a tiny Javascript library to give access to AJAX, websockets, and more, using HTML attributes. This fits perfectly with gomponents when you need that extra bit of client-side interactivity. Check out <a href="https://github.com/maragudk/gomponents-htmx">the gomponents-htmx library on Github</a>.`)),
 				H3(g.Text(`Example`)),
