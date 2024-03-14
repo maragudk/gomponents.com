@@ -11,6 +11,9 @@ import (
 //go:embed examples/tailwindcss/tailwindcss.go
 var tailwindcss string
 
+//go:embed examples/bulma/bulma.go
+var bulma string
+
 //go:embed examples/heroicons/heroicons.go
 var heroicons string
 
@@ -39,6 +42,8 @@ func PlusPage() g.Node {
 		{
 			title: `Bulma`, id: `bulma`, body: Div(
 				P(g.Raw(`gomponents and <a href="https://bulma.io">Bulma</a> also go well together. Check out <a href="https://willoma.github.io/bulma-gomponents/">bulma-gomponents</a> by <a href="https://github.com/willoma">willoma</a> for easy integration.`)),
+				H3(g.Text(`Example`)),
+				CodeBlock(bulma),
 			),
 		},
 		{
