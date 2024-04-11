@@ -1,7 +1,7 @@
 package main
 
 import (
-	lucide "github.com/eduardolat/gomponents-lucide"
+	"github.com/eduardolat/gomponents-lucide"
 	"github.com/maragudk/gomponents"
 	"github.com/maragudk/gomponents/html"
 )
