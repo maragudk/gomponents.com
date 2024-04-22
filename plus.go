@@ -17,6 +17,9 @@ var bulma string
 //go:embed examples/heroicons/heroicons.go
 var heroicons string
 
+//go:embed examples/lucideicons/lucideicons.go
+var lucideicons string
+
 //go:embed examples/htmx/htmx.go
 var htmx string
 
@@ -51,6 +54,13 @@ func PlusPage() g.Node {
 				P(g.Raw(`<a href="https://htmx.org">HTMX</a> is a tiny Javascript library to give access to AJAX, websockets, and more, using HTML attributes. This fits perfectly with gomponents when you need that extra bit of client-side interactivity. Check out <a href="https://github.com/maragudk/gomponents-htmx">the gomponents-htmx library on Github</a>.`)),
 				H3(g.Text(`Example`)),
 				CodeBlock(htmx),
+			),
+		},
+		{
+			title: `Lucide Icons`, id: `lucideicons`, body: Div(
+				P(g.Raw(`<a href="https://lucide.dev/">Lucide Icons</a> are a collection of many beautiful & consistent icons made by the community. You can easily use them with gomponents, check out <a href="https://github.com/eduardolat/gomponents-lucide">the gomponents-lucide library on Github</a>.`)),
+				H3(g.Text(`Example`)),
+				CodeBlock(lucideicons),
 			),
 		},
 		{
