@@ -2,12 +2,12 @@ package main
 
 import (
 	"github.com/eduardolat/gomponents-lucide"
-	"github.com/maragudk/gomponents"
-	"github.com/maragudk/gomponents/html"
+	g "github.com/maragudk/gomponents"
+	. "github.com/maragudk/gomponents/html"
 )
 
-func myPage() gomponents.Node {
-	return html.Div(
+func myPage() g.Node {
+	return Div(
 		lucide.Star(),
 		lucide.Languages(),
 		lucide.Usb(),
@@ -15,7 +15,7 @@ func myPage() gomponents.Node {
 		lucide.Cherry(
 			// You can add any attributes you want
 			// to customize the SVG
-			html.Class("w-6 h-6 text-blue-500"),
+			Class("w-6 h-6 text-blue-500"),
 		),
 	)
 }

@@ -57,13 +57,6 @@ func PlusPage() g.Node {
 			),
 		},
 		{
-			title: `Lucide Icons`, id: `lucideicons`, body: Div(
-				P(g.Raw(`<a href="https://lucide.dev/">Lucide Icons</a> are a collection of many beautiful & consistent icons made by the community. You can easily use them with gomponents, check out <a href="https://github.com/eduardolat/gomponents-lucide">the gomponents-lucide library on Github</a>.`)),
-				H3(g.Text(`Example`)),
-				CodeBlock(lucideicons),
-			),
-		},
-		{
 			title: `Heroicons`, id: `heroicons`, body: Div(
 				P(g.Raw(`<a href="https://heroicons.com">Heroicons</a> are a collection of handcrafted SVG icons, by the makers of TailwindCSS. They work great together with gomponents! Check out <a href="https://github.com/maragudk/gomponents-heroicons">the gomponents-heroicons library on Github</a>.`)),
 				H3(g.Text(`Example`)),
@@ -75,6 +68,13 @@ func PlusPage() g.Node {
 				P(g.Raw(`<a href="https://github.com/delaneyj/gomponents-iconify/">Iconify</a> is a large set of gomponents icons created by <a href="https://github.com/delaneyj">delaneyj</a>, from the <a href="https://iconify.design">Iconify project</a>.`)),
 				H3(g.Text(`Example`)),
 				CodeBlock(iconify),
+			),
+		},
+		{
+			title: `Lucide Icons`, id: `lucideicons`, body: Div(
+				P(g.Raw(`<a href="https://lucide.dev/">Lucide Icons</a> are a collection of many beautiful & consistent icons made by the community. You can easily use them with gomponents, check out <a href="https://github.com/eduardolat/gomponents-lucide">the gomponents-lucide library on Github</a>.`)),
+				H3(g.Text(`Example`)),
+				CodeBlock(lucideicons),
 			),
 		},
 	}
