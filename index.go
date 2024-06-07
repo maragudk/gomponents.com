@@ -84,7 +84,7 @@ func IndexPage() g.Node {
 			H3(g.Text("A sample app")),
 			P(
 				g.Text("Sometimes there's nothing like seeing it in action. Try running this complete program and going to "),
-				A(Href("http://localhost:8080"), g.Text("localhost:8080")),
+				A(Href("http://localhost:8081"), g.Text("localhost:8081")),
 				g.Text(" ."),
 			),
 			CodeBlock(simpleExample),
