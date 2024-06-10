@@ -16,7 +16,7 @@ func main() {
 	http.Handle("/contact", createHandler(contactPage()))
 	http.Handle("/about", createHandler(aboutPage()))
 
-	if err := http.ListenAndServe("localhost:8081", nil); err != nil && !errors.Is(err, http.ErrServerClosed) {
+	if err := http.ListenAndServe("localhost:8080", nil); err != nil && !errors.Is(err, http.ErrServerClosed) {
 		log.Println("Error:", err)
 	}
 }
