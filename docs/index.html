@@ -37,7 +37,7 @@ func NavbarItem(name, path string) g.Node {
 func NavbarItem(name, path string) g.Node {
 	return Li(A(Href(path), g.Text(name)))
 }
-</code></pre><h3>Map data to components</h3><p>What if you have data and want to map it to components? No problem.</p><pre><code class="language-go">type NavLink struct {
+</code></pre><p>PS: There's also <code>Iff</code>, which takes a callback function instead, to avoid those pesky nil pointer errors.</p><h3>Map data to components</h3><p>What if you have data and want to map it to components? No problem.</p><pre><code class="language-go">type NavLink struct {
 	Name string
 	Path string
 }
@@ -239,4 +239,4 @@ func PageFooter() g.Node {
 		P(A(Href(&#34;https://www.gomponents.com&#34;), g.Text(&#34;gomponents&#34;))),
 	)
 }
-</code></pre><p>See also <a href="https://github.com/maragudk/gomponents">the Github repository</a> or <a href="https://www.maragu.dk/blog/gomponents-declarative-view-components-in-go/">the blog post that started it all</a>.</p><p><a href="https://maragu.gumroad.com/l/gomponents">Buy the Official gomponents &lt;marquee&gt; Element here!</a></p></div></div><footer class="mt-32 prose dark:prose-invert prose-sm prose-indigo"><p>made in 🇩🇰 by <a href="https://www.maragu.dk">maragu</a></p><p>maker of <a href="https://www.golang.dk">online Go courses</a></p></footer></div></body></html>
+</code></pre><h3>Online HTML-to-gomponents converter</h3><p><a href="https://github.com/PiotrKowalski">Piotr Kowalski</a> created an <a href="https://htg.piotrkowalski.me">online HTML-to-gomponents</a> converter tool!</p><h3>The end</h3><p>See also <a href="https://github.com/maragudk/gomponents">the Github repository</a> or <a href="https://www.maragu.dk/blog/gomponents-declarative-view-components-in-go/">the blog post that started it all</a>.</p><p><a href="https://maragu.gumroad.com/l/gomponents">Buy the Official gomponents &lt;marquee&gt; Element here!</a></p></div></div><footer class="mt-32 prose dark:prose-invert prose-sm prose-indigo"><p>made in 🇩🇰 by <a href="https://www.maragu.dk">maragu</a></p><p>maker of <a href="https://www.golang.dk">online Go courses</a></p></footer></div></body></html>

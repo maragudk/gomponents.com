@@ -63,6 +63,8 @@ func IndexPage() g.Node {
 			P(g.Text("Sometimes you only want to show a component based on some condition. Enter "), Code(g.Text("If")), g.Text(":")),
 			CodeBlock(stripLines(navbar2, 7)),
 
+			P(g.Raw(`PS: There's also <code>Iff</code>, which takes a callback function instead, to avoid those pesky nil pointer errors.`)),
+
 			H3(g.Text("Map data to components")),
 			P(g.Text("What if you have data and want to map it to components? No problem.")),
 			CodeBlock(stripLines(navbar3, 7)),
@@ -88,6 +90,12 @@ func IndexPage() g.Node {
 				g.Text(" ."),
 			),
 			CodeBlock(simpleExample),
+
+			H3(g.Text(`Online HTML-to-gomponents converter`)),
+
+			P(g.Raw(`<a href="https://github.com/PiotrKowalski">Piotr Kowalski</a> created an <a href="https://htg.piotrkowalski.me">online HTML-to-gomponents</a> converter tool!`)),
+
+			H3(g.Text(`The end`)),
 
 			P(
 				g.Text("See also "),

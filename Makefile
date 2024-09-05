@@ -10,6 +10,10 @@ build-css: tailwindcss
 lint:
 	golangci-lint run
 
+.PHONY: serve
+serve:
+	go run ./cmd/server
+
 tailwindcss:
 	curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
 	chmod +x tailwindcss-macos-arm64
