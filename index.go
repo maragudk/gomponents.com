@@ -8,9 +8,6 @@ import (
 	. "github.com/maragudk/gomponents/html"
 )
 
-//go:embed examples/simple.go
-var simpleExample string
-
 //go:embed examples/navbar1/navbar.go
 var navbar1 string
 
@@ -84,12 +81,8 @@ func IndexPage() g.Node {
 			BashBlock("$ go get github.com/maragudk/gomponents"),
 
 			H3(g.Text("A sample app")),
-			P(
-				g.Text("Sometimes there's nothing like seeing it in action. Try running this complete program and going to "),
-				A(Href("http://localhost:8080"), g.Text("localhost:8080")),
-				g.Text(" ."),
-			),
-			CodeBlock(simpleExample),
+
+			P(g.Raw(`<a href="https://github.com/maragudk/gomponents/tree/main/internal/examples/app">There’s a sample app inside the gomponents repository</a>. It’s a simple web server that serves two HTML pages using gomponents and TailwindCSS.`)),
 
 			H3(g.Text(`Online HTML-to-gomponents converter`)),
 
