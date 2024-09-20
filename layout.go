@@ -60,7 +60,6 @@ func Navbar(path string) g.Node {
 			Div(Class("flex items-center space-x-4 sm:space-x-6 lg:space-x-8 h-16"),
 				NavbarLink("/", "Home", path),
 				NavbarLink("/plus/", "gomponents +", path),
-				NavbarLink("/mentions/", "Mentions", path),
 			),
 		),
 	)
