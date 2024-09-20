@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 	"path"
+	"path/filepath"
 
 	g "github.com/maragudk/gomponents"
 )
@@ -20,15 +21,24 @@ var pages = map[string]g.Node{
 
 func build() int {
 	for pagePath, n := range pages {
-		f, err := os.Create(path.Join("docs", pagePath))
+		fullPagePath := path.Join("docs", pagePath)
+
+		if err := os.MkdirAll(filepath.Dir(fullPagePath), os.ModePerm); err != nil {
+			log.Println("Error creating directory:", err)
+			return 1
+		}
+
+		f, err := os.Create(fullPagePath)
 		if err != nil {
 			log.Println("Error creating file:", err)
 			return 1
 		}
+
 		if err := n.Render(f); err != nil {
 			log.Println("Error writing page:", err)
 			return 1
 		}
+
 		_ = f.Close()
 	}
 	return 0
