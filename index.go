@@ -52,30 +52,30 @@ func IndexPage() g.Node {
 
 			H3(g.Text("Components are just functions")),
 			P(g.Text("Have a look at this component. If you know HTML, you know what it does. Easy, right?")),
-			CodeBlock(stripLines(navbar1, 7)),
+			CodeBlock(stripLines(navbar1, 2)),
 			P(g.Text("Let's deduplicate a bit.")),
-			CodeBlock(stripLines(navbar1b, 7)),
+			CodeBlock(stripLines(navbar1b, 2)),
 
 			H3(g.Text("Inline if")),
 			P(g.Text("Sometimes you only want to show a component based on some condition. Enter "), Code(g.Text("If")), g.Text(":")),
-			CodeBlock(stripLines(navbar2, 7)),
+			CodeBlock(stripLines(navbar2, 2)),
 
 			P(g.Raw(`PS: There's also <code>Iff</code>, which takes a callback function instead, to avoid those pesky nil pointer errors.`)),
 
 			H3(g.Text("Map data to components")),
 			P(g.Text("What if you have data and want to map it to components? No problem.")),
-			CodeBlock(stripLines(navbar3, 7)),
+			CodeBlock(stripLines(navbar3, 2)),
 
 			H3(g.Text("Styling")),
 			P(g.Text("Want to apply CSS classes based on state? Use the "), Code(g.Text("Classes")), g.Text(" helper.")),
-			CodeBlock(stripLines(navbar4, 8)),
+			CodeBlock(stripLines(navbar4, 2)),
 
 			H3(g.Text("Sometimes you just want HTML")),
 			P(g.Text("Miss those "), Code(g.Text("<tags>")), g.Text(" or need to inject HTML from somewhere else? Use "), Code(g.Text("Raw")), g.Text(".")),
-			CodeBlock(stripLines(navbar5, 8)),
+			CodeBlock(stripLines(navbar5, 2)),
 
 			H3(g.Text("It's all just Go")),
-			P(g.Text("Your editor helps you with auto-completion. It's type-safe. Nice formatting using gofmt. And all common HTML elements and attributes are included!")),
+			P(g.Text("Your editor helps you with auto-completion. It's type-safe. Nice formatting using gofmt. You can even use the debugger. And all common HTML elements and attributes are included!")),
 
 			H2(g.Text("Get started")),
 			BashBlock("$ go get github.com/maragudk/gomponents"),

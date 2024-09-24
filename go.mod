@@ -3,7 +3,7 @@ module gomponents.com
 go 1.22.0
 
 require (
-	github.com/maragudk/gomponents v0.20.5
+	github.com/maragudk/gomponents v0.21.0
 	github.com/maragudk/gomponents-heroicons v0.5.0
 )
 

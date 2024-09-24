@@ -13,9 +13,9 @@ type NavLink struct {
 func Navbar(loggedIn bool, links []NavLink) g.Node {
 	return Nav(Class("navbar"),
 		Ol(
-			g.Group(g.Map(links, func(l NavLink) g.Node {
+			g.Map(links, func(l NavLink) g.Node {
 				return NavbarItem(l.Name, l.Path)
-			})),
+			}),
 
 			g.If(loggedIn,
 				NavbarItem("Log out", "/logout"),

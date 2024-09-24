@@ -3,8 +3,8 @@ github.com/delaneyj/gomponents-iconify v0.0.0-20230611230628-e1005a1b979f/go.mod
 github.com/eduardolat/gomponents-lucide v1.0.0 h1:Hy0oQEEp7q4zQXUPyeJTXHHpkoeJTYlvpM8RAXhK7ec=
 github.com/eduardolat/gomponents-lucide v1.0.0/go.mod h1:C0Yx64QM2RXIal8pl/HdWU0xac0uek+IQI2eZAaeAwk=
 github.com/maragudk/gomponents v0.20.0/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
-github.com/maragudk/gomponents v0.20.5 h1:Z8phdQIW+NqAGO0clMh/wyv1/M7viUBf7/EL44gvwtI=
-github.com/maragudk/gomponents v0.20.5/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
+github.com/maragudk/gomponents v0.21.0 h1:s0QbrirP8/rH1P4kqN48DN2zjvpk9wHkSqi4+xp99SQ=
+github.com/maragudk/gomponents v0.21.0/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
 github.com/maragudk/gomponents-heroicons v0.5.0 h1:R1hSNSAK4lynFHZA3ycHkIfBugEfNI0uz43WRa5+Lqo=
 github.com/maragudk/gomponents-heroicons v0.5.0/go.mod h1:BdJ7d+F4fa2wDNO6ZQ1eeVHv6GumZzek2xEBI6FIsDM=
 github.com/maragudk/gomponents-htmx v0.5.0 h1:sWtiRa72YmymgxccjTNZW3h0akKsZvnhYke9RQiS9dk=
