@@ -41,7 +41,7 @@ func IndexPage() g.Node {
 			P(
 				A(Href("https://github.com/maragudk/gomponents"), g.Text("See gomponents on Github")),
 				g.Text(" or "),
-				A(Href("https://maragu.gumroad.com/l/gomponents"), g.Text("buy the Official gomponents <marquee> Element 🤯🤩")),
+				A(Href("https://maragu.gumroad.com/l/gomponents"), g.Text("buy the Official gomponents <marquee> Element 😁")),
 			),
 
 			H3(g.Text("Video introduction")),
