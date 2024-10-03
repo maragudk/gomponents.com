@@ -36,12 +36,8 @@ func Page(title, description, baseURL, path string, body g.Node) g.Node {
 				),
 				Footer(Class("mt-32 prose dark:prose-invert prose-sm prose-indigo"),
 					P(
-						g.Text("made in 🇩🇰 by "),
-						A(Href("https://www.maragu.dk"), g.Text("maragu")),
-					),
-					P(
-						g.Text("maker of "),
-						A(Href("https://www.golang.dk"), g.Text("online Go courses")),
+						g.Text("made with ✨sparkles✨ by "),
+						A(Href("https://www.maragu.dev"), g.Text("maragu")),
 					),
 				),
 			),
