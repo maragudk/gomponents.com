@@ -40,9 +40,9 @@ func IndexPage() g.Node {
 			BashBlock("$ go get github.com/maragudk/gomponents"),
 			P(
 				A(Href("https://github.com/maragudk/gomponents"), g.Text("See gomponents on Github")),
-				g.Text(" or "),
-				A(Href("https://maragu.gumroad.com/l/gomponents"), g.Text("buy the Official gomponents <marquee> Element 😁")),
 			),
+
+			P(g.Raw(`Does your company depend on this project? <a href="mailto:markus@maragu.dk?Subject=Supporting%20your%20project">Contact me at markus@maragu.dk</a> to discuss options for a one-time or recurring invoice to ensure its continued thriving.`)),
 
 			H3(g.Text("Video introduction")),
 
@@ -98,7 +98,7 @@ func IndexPage() g.Node {
 				g.Text("."),
 			),
 			P(
-				A(Href("https://maragu.gumroad.com/l/gomponents"), g.Text("Buy the Official gomponents <marquee> Element here!")),
+				A(Href("https://maragu.gumroad.com/l/gomponents"), g.Text("PS: Buy the Official gomponents <marquee> Element here! 😁")),
 			),
 		),
 	)
