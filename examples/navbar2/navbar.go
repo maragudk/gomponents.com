@@ -1,24 +1,24 @@
 package main
 
 import (
-	g "github.com/maragudk/gomponents"
-	. "github.com/maragudk/gomponents/html"
+	. "maragu.dev/gomponents"
+	. "maragu.dev/gomponents/html"
 )
 
-func Navbar(loggedIn bool) g.Node {
+func Navbar(loggedIn bool) Node {
 	return Nav(Class("navbar"),
 		Ol(
 			NavbarItem("Home", "/"),
 			NavbarItem("Contact", "/contact"),
 			NavbarItem("About", "/about"),
 
-			g.If(loggedIn,
+			If(loggedIn,
 				NavbarItem("Log out", "/logout"),
 			),
 		),
 	)
 }
 
-func NavbarItem(name, path string) g.Node {
-	return Li(A(Href(path), g.Text(name)))
+func NavbarItem(name, path string) Node {
+	return Li(A(Href(path), Text(name)))
 }

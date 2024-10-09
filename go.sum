@@ -5,9 +5,11 @@ github.com/eduardolat/gomponents-lucide v1.0.0/go.mod h1:C0Yx64QM2RXIal8pl/HdWU0
 github.com/maragudk/gomponents v0.20.0/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
 github.com/maragudk/gomponents v0.21.0 h1:s0QbrirP8/rH1P4kqN48DN2zjvpk9wHkSqi4+xp99SQ=
 github.com/maragudk/gomponents v0.21.0/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
-github.com/maragudk/gomponents-heroicons v0.5.0 h1:R1hSNSAK4lynFHZA3ycHkIfBugEfNI0uz43WRa5+Lqo=
-github.com/maragudk/gomponents-heroicons v0.5.0/go.mod h1:BdJ7d+F4fa2wDNO6ZQ1eeVHv6GumZzek2xEBI6FIsDM=
-github.com/maragudk/gomponents-htmx v0.5.0 h1:sWtiRa72YmymgxccjTNZW3h0akKsZvnhYke9RQiS9dk=
-github.com/maragudk/gomponents-htmx v0.5.0/go.mod h1:XgI7WE6ECWlyeVQ9Ix3R6aoKS4HtCSYtuQ4iH27GVDE=
+github.com/maragudk/gomponents-heroicons/v2 v2.0.0 h1:zvkmcIhb4MbWIb6iP0by1AeQp8uR3ro4/XGNwfJH2XU=
+github.com/maragudk/gomponents-heroicons/v2 v2.0.0/go.mod h1:VpIu9qDA7B4xB/ghId8DMFQXeAOVISZ5GMOZY8Aq/YY=
 github.com/willoma/bulma-gomponents v0.2.0 h1:Y64AujzKElPTutstCSiDY4+jkad8LWZMDbGEn2Wb6uQ=
 github.com/willoma/bulma-gomponents v0.2.0/go.mod h1:8x4NiLXcYZrTsAjaP3OhXBsMmnvQXGgkPBxJErNbmB0=
+maragu.dev/gomponents v1.0.0-beta1 h1:I51NqKfrtQC4GxuWShqW5CT5BrfToMEueLD76IhdSXs=
+maragu.dev/gomponents v1.0.0-beta1/go.mod h1:oEDahza2gZoXDoDHhw8jBNgH+3UR5ni7Ur648HORydM=
+maragu.dev/gomponents-htmx v0.6.0 h1:sXPtAyItAiN+dZqPM3fAz/dUms+oW9XkqCERH6iYQD0=
+maragu.dev/gomponents-htmx v0.6.0/go.mod h1:1WGLVDneoOYN5ELLAnzBD7q7xV+IJSBA1hvTKBzdP/w=

@@ -1,14 +1,14 @@
 package main
 
 import (
-	g "github.com/maragudk/gomponents"
-	hx "github.com/maragudk/gomponents-htmx"
-	. "github.com/maragudk/gomponents/html"
+	. "maragu.dev/gomponents"
+	hx "maragu.dev/gomponents-htmx"
+	. "maragu.dev/gomponents/html"
 )
 
-func Navbar() g.Node {
+func Navbar() Node {
 	return Nav(hx.Boost("true"),
-		A(Href("/"), g.Text("Home")),
-		A(Href("/about"), g.Text("About")),
+		A(Href("/"), Text("Home")),
+		A(Href("/about"), Text("About")),
 	)
 }

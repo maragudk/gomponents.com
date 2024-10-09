@@ -1,8 +1,8 @@
 package main
 
 import (
-	g "github.com/maragudk/gomponents"
-	. "github.com/maragudk/gomponents/html"
+	. "maragu.dev/gomponents"
+	. "maragu.dev/gomponents/html"
 )
 
 type NavLink struct {
@@ -10,20 +10,20 @@ type NavLink struct {
 	Path string
 }
 
-func Navbar(loggedIn bool, links []NavLink) g.Node {
+func Navbar(loggedIn bool, links []NavLink) Node {
 	return Nav(Class("navbar"),
 		Ol(
-			g.Map(links, func(l NavLink) g.Node {
+			Map(links, func(l NavLink) Node {
 				return NavbarItem(l.Name, l.Path)
 			}),
 
-			g.If(loggedIn,
+			If(loggedIn,
 				NavbarItem("Log out", "/logout"),
 			),
 		),
 	)
 }
 
-func NavbarItem(name, path string) g.Node {
-	return Li(A(Href(path), g.Text(name)))
+func NavbarItem(name, path string) Node {
+	return Li(A(Href(path), Text(name)))
 }

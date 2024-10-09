@@ -1,11 +1,11 @@
 package main
 
 import (
-	g "github.com/maragudk/gomponents"
 	b "github.com/willoma/bulma-gomponents"
+	. "maragu.dev/gomponents"
 )
 
-func Navbar() g.Node {
+func Navbar() Node {
 	return b.Navbar(
 		b.Dark,
 		b.NavbarStart(

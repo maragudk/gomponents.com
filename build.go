@@ -6,7 +6,7 @@ import (
 	"path"
 	"path/filepath"
 
-	g "github.com/maragudk/gomponents"
+	g "maragu.dev/gomponents"
 )
 
 func main() {

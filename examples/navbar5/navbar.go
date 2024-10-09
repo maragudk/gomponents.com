@@ -1,9 +1,9 @@
 package main
 
 import (
-	g "github.com/maragudk/gomponents"
-	. "github.com/maragudk/gomponents/components"
-	. "github.com/maragudk/gomponents/html"
+	. "maragu.dev/gomponents"
+	. "maragu.dev/gomponents/components"
+	. "maragu.dev/gomponents/html"
 )
 
 type NavLink struct {
@@ -11,24 +11,24 @@ type NavLink struct {
 	Path string
 }
 
-func Navbar(loggedIn bool, links []NavLink, currentPath string) g.Node {
+func Navbar(loggedIn bool, links []NavLink, currentPath string) Node {
 	return Nav(Class("navbar"),
-		g.Raw(`<span class="logo"><img src="logo.png></span>"`),
+		Raw(`<span class="logo"><img src="logo.png></span>"`),
 
 		Ol(
-			g.Map(links, func(l NavLink) g.Node {
+			Map(links, func(l NavLink) Node {
 				return NavbarItem(l.Name, l.Path, l.Path == currentPath)
 			}),
 
-			g.If(loggedIn,
+			If(loggedIn,
 				NavbarItem("Log out", "/logout", false),
 			),
 		),
 	)
 }
 
-func NavbarItem(name, path string, active bool) g.Node {
-	return Li(A(Href(path), g.Text(name)), Classes{
+func NavbarItem(name, path string, active bool) Node {
+	return Li(A(Href(path), Text(name)), Classes{
 		"navbar-item": true,
 		"active":      active,
 		"inactive":    !active,
