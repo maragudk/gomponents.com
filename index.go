@@ -4,8 +4,8 @@ import (
 	_ "embed"
 	"strings"
 
-	g "github.com/maragudk/gomponents"
-	. "github.com/maragudk/gomponents/html"
+	. "maragu.dev/gomponents"
+	. "maragu.dev/gomponents/html"
 )
 
 //go:embed examples/navbar1/navbar.go
@@ -26,79 +26,79 @@ var navbar4 string
 //go:embed examples/navbar5/navbar.go
 var navbar5 string
 
-func IndexPage() g.Node {
+func IndexPage() Node {
 	return Page(
 		"gomponents, HTML components in pure Go",
-		"HTML components in pure Go, that render to HTML5.",
+		"HTML components in pure Go, that render to HTML 5.",
 		"https://www.gomponents.com",
 		"/",
 
 		Div(
-			H1(g.Text("Tired of complex template languages?")),
-			H2(g.Text("Try HTML components in pure Go.")),
-			P(Class("lead"), g.Raw(`<em>gomponents</em> are HTML components in pure Go. They render to HTML 5, and make it easy for you to build reusable components. So you can focus on building your app instead of learning yet another templating language.`)),
-			BashBlock("$ go get github.com/maragudk/gomponents"),
+			H1(Text("Tired of complex template languages?")),
+			H2(Text("Try HTML components in pure Go.")),
+			P(Class("lead"), Raw(`<em>gomponents</em> are HTML components in pure Go. They render to HTML 5, and make it easy for you to build reusable components. So you can focus on building your app instead of learning yet another templating language.`)),
+			BashBlock("$ go get maragu.dev/gomponents@v1.0.0-beta1"),
 			P(
-				A(Href("https://github.com/maragudk/gomponents"), g.Text("See gomponents on Github")),
+				A(Href("https://github.com/maragudk/gomponents"), Text("See gomponents on Github")),
 			),
 
-			P(g.Raw(`Does your company depend on this project? <a href="mailto:markus@maragu.dk?Subject=Supporting%20your%20project">Contact me at markus@maragu.dk</a> to discuss options for a one-time or recurring invoice to ensure its continued thriving.`)),
+			P(Raw(`Does your company depend on this project? <a href="mailto:markus@maragu.dk?Subject=Supporting%20your%20project">Contact me at markus@maragu.dk</a> to discuss options for a one-time or recurring invoice to ensure its continued thriving.`)),
 
-			H3(g.Text("Video introduction")),
+			H3(Text("Video introduction")),
 
-			P(g.Raw(`Into video? See this lightning talk from GopherCon 2021.`)),
+			P(Raw(`Into video? See this lightning talk from GopherCon 2021.`)),
 
-			g.Raw(`<iframe class="w-full h-80 sm:h-96" src="https://www.youtube-nocookie.com/embed/5XiewS8ZbH8?start=570" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`),
+			Raw(`<iframe class="w-full h-80 sm:h-96" src="https://www.youtube-nocookie.com/embed/5XiewS8ZbH8?start=570" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`),
 
-			H3(g.Text("Components are just functions")),
-			P(g.Text("Have a look at this component. If you know HTML, you know what it does. Easy, right?")),
+			H3(Text("Components are just functions")),
+			P(Text("Have a look at this component. If you know HTML, you know what it does. Easy, right?")),
 			CodeBlock(stripLines(navbar1, 2)),
-			P(g.Text("Let's deduplicate a bit.")),
+			P(Text("Let's deduplicate a bit.")),
 			CodeBlock(stripLines(navbar1b, 2)),
 
-			H3(g.Text("Inline if")),
-			P(g.Text("Sometimes you only want to show a component based on some condition. Enter "), Code(g.Text("If")), g.Text(":")),
+			H3(Text("Inline if")),
+			P(Text("Sometimes you only want to show a component based on some condition. Enter "), Code(Text("If")), Text(":")),
 			CodeBlock(stripLines(navbar2, 2)),
 
-			P(g.Raw(`PS: There's also <code>Iff</code>, which takes a callback function instead, to avoid those pesky nil pointer errors.`)),
+			P(Raw(`PS: There's also <code>Iff</code>, which takes a callback function instead, to avoid those pesky nil pointer errors.`)),
 
-			H3(g.Text("Map data to components")),
-			P(g.Text("What if you have data and want to map it to components? No problem.")),
+			H3(Text("Map data to components")),
+			P(Text("What if you have data and want to map it to components? No problem.")),
 			CodeBlock(stripLines(navbar3, 2)),
 
-			H3(g.Text("Styling")),
-			P(g.Text("Want to apply CSS classes based on state? Use the "), Code(g.Text("Classes")), g.Text(" helper.")),
+			H3(Text("Styling")),
+			P(Text("Want to apply CSS classes based on state? Use the "), Code(Text("Classes")), Text(" helper.")),
 			CodeBlock(stripLines(navbar4, 2)),
 
-			H3(g.Text("Sometimes you just want HTML")),
-			P(g.Text("Miss those "), Code(g.Text("<tags>")), g.Text(" or need to inject HTML from somewhere else? Use "), Code(g.Text("Raw")), g.Text(".")),
+			H3(Text("Sometimes you just want HTML")),
+			P(Text("Miss those "), Code(Text("<tags>")), Text(" or need to inject HTML from somewhere else? Use "), Code(Text("Raw")), Text(".")),
 			CodeBlock(stripLines(navbar5, 2)),
 
-			H3(g.Text("It's all just Go")),
-			P(g.Text("Your editor helps you with auto-completion. It's type-safe. Nice formatting using gofmt. You can even use the debugger. And all common HTML elements and attributes are included!")),
+			H3(Text("It's all just Go")),
+			P(Text("Your editor helps you with auto-completion. It's type-safe. Nice formatting using gofmt. You can even use the debugger. And all common HTML elements and attributes are included!")),
 
-			H2(g.Text("Get started")),
-			BashBlock("$ go get github.com/maragudk/gomponents"),
+			H2(Text("Get started")),
+			BashBlock("$ go get maragu.dev/gomponents@v1.0.0-beta1"),
 
-			H3(g.Text("A sample app")),
+			H3(Text("A sample app")),
 
-			P(g.Raw(`<a href="https://github.com/maragudk/gomponents/tree/main/internal/examples/app">There’s a sample app inside the gomponents repository</a>. It’s a simple web server that serves two HTML pages using gomponents and TailwindCSS.`)),
+			P(Raw(`<a href="https://github.com/maragudk/gomponents/tree/main/internal/examples/app">There’s a sample app inside the gomponents repository</a>. It’s a simple web server that serves two HTML pages using gomponents and TailwindCSS.`)),
 
-			H3(g.Text(`Online HTML-to-gomponents converter`)),
+			H3(Text(`Online HTML-to-gomponents converter`)),
 
-			P(g.Raw(`<a href="https://github.com/PiotrKowalski">Piotr Kowalski</a> created an <a href="https://htg.piotrkowalski.me">online HTML-to-gomponents</a> converter tool!`)),
+			P(Raw(`<a href="https://github.com/PiotrKowalski">Piotr Kowalski</a> created an <a href="https://htg.piotrkowalski.me">online HTML-to-gomponents</a> converter tool!`)),
 
-			H3(g.Text(`The end`)),
+			H3(Text(`The end`)),
 
 			P(
-				g.Text("See also "),
-				A(Href("https://github.com/maragudk/gomponents"), g.Text("the Github repository")),
-				g.Text(" or "),
-				A(Href("https://www.maragu.dk/blog/gomponents-declarative-view-components-in-go/"), g.Text("the blog post that started it all")),
-				g.Text("."),
+				Text("See also "),
+				A(Href("https://github.com/maragudk/gomponents"), Text("the Github repository")),
+				Text(" or "),
+				A(Href("https://www.maragu.dk/blog/gomponents-declarative-view-components-in-go/"), Text("the blog post that started it all")),
+				Text("."),
 			),
 			P(
-				A(Href("https://maragu.gumroad.com/l/gomponents"), g.Text("PS: Buy the Official gomponents <marquee> Element here! 😁")),
+				Text("PS: "), A(Href("https://maragu.gumroad.com/l/gomponents"), Text("Buy the Official gomponents <marquee> Element here! 😁")),
 			),
 		),
 	)

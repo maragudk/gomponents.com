@@ -1,11 +1,11 @@
 package main
 
 import (
-	g "github.com/maragudk/gomponents"
-	. "github.com/maragudk/gomponents/html"
+	. "maragu.dev/gomponents"
+	. "maragu.dev/gomponents/html"
 )
 
-func Navbar() g.Node {
+func Navbar() Node {
 	return Nav(Class("navbar"),
 		Ol(
 			NavbarItem("Home", "/"),
@@ -15,6 +15,6 @@ func Navbar() g.Node {
 	)
 }
 
-func NavbarItem(name, path string) g.Node {
-	return Li(A(Href(path), g.Text(name)))
+func NavbarItem(name, path string) Node {
+	return Li(A(Href(path), Text(name)))
 }

@@ -2,11 +2,11 @@ package main
 
 import (
 	"github.com/eduardolat/gomponents-lucide"
-	g "github.com/maragudk/gomponents"
-	. "github.com/maragudk/gomponents/html"
+	. "maragu.dev/gomponents"
+	. "maragu.dev/gomponents/html"
 )
 
-func myPage() g.Node {
+func myPage() Node {
 	return Div(
 		lucide.Star(),
 		lucide.Languages(),
