@@ -6,14 +6,14 @@ import (
 	"path"
 	"path/filepath"
 
-	g "maragu.dev/gomponents"
+	. "maragu.dev/gomponents"
 )
 
 func main() {
 	os.Exit(build())
 }
 
-var pages = map[string]g.Node{
+var pages = map[string]Node{
 	"index.html":      IndexPage(),
 	"plus/index.html": PlusPage(),
 }
