@@ -12,6 +12,6 @@ require (
 require (
 	github.com/eduardolat/gomponents-lucide v1.0.0
 	github.com/maragudk/gomponents-heroicons/v2 v2.0.0
-	maragu.dev/gomponents v1.0.0-beta1
+	maragu.dev/gomponents v1.0.0
 	maragu.dev/gomponents-htmx v0.6.0
 )

@@ -37,7 +37,7 @@ func IndexPage() Node {
 			H1(Text("Tired of complex template languages?")),
 			H2(Text("Try HTML components in pure Go.")),
 			P(Class("lead"), Raw(`<em>gomponents</em> are HTML components in pure Go. They render to HTML 5, and make it easy for you to build reusable components. So you can focus on building your app instead of learning yet another templating language.`)),
-			BashBlock("$ go get maragu.dev/gomponents@v1.0.0-beta1"),
+			BashBlock("$ go get maragu.dev/gomponents"),
 			P(
 				A(Href("https://github.com/maragudk/gomponents"), Text("See gomponents on Github")),
 			),
@@ -78,7 +78,7 @@ func IndexPage() Node {
 			P(Text("Your editor helps you with auto-completion. It's type-safe. Nice formatting using gofmt. You can even use the debugger. And all common HTML elements and attributes are included!")),
 
 			H2(Text("Get started")),
-			BashBlock("$ go get maragu.dev/gomponents@v1.0.0-beta1"),
+			BashBlock("$ go get maragu.dev/gomponents"),
 
 			H3(Text("A sample app")),
 
