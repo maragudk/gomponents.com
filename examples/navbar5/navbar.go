@@ -13,7 +13,7 @@ type NavLink struct {
 
 func Navbar(loggedIn bool, links []NavLink, currentPath string) Node {
 	return Nav(Class("navbar"),
-		Raw(`<span class="logo"><img src="logo.png></span>"`),
+		Raw(`<span class="logo"><img src="logo.png"></span>`),
 
 		Ol(
 			Map(links, func(l NavLink) Node {
