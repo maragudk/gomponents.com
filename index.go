@@ -80,9 +80,11 @@ func IndexPage() Node {
 			H2(Text("Get started")),
 			BashBlock("$ go get maragu.dev/gomponents"),
 
-			H3(Text("A sample app")),
+			H3(Text("Examples & templates")),
 
-			P(Raw(`<a href="https://github.com/maragudk/gomponents/tree/main/internal/examples/app">There’s a sample app inside the gomponents repository</a>. It’s a simple web server that serves two HTML pages using gomponents and TailwindCSS.`)),
+			P(Raw(`<a href="https://github.com/maragudk/gomponents/tree/main/internal/examples/app">There’s an example app inside the gomponents repository</a>. It’s a simple web server that serves two HTML pages using gomponents and TailwindCSS.`)),
+
+			P(Raw(`There’s also the <a href="https://github.com/maragudk/gomponents-starter-kit">gomponents starter kit</a>, a full template repository for building a web app with gomponents, TailwindCSS, and HTMX.`)),
 
 			H3(Text(`Online HTML-to-gomponents converter`)),
 
