@@ -23,6 +23,9 @@ var lucideicons string
 //go:embed examples/htmx/htmx.go
 var htmx string
 
+//go:embed examples/alpinejs/alpinejs.go
+var alpinejs string
+
 //go:embed examples/iconify/iconify.go
 var iconify string
 
@@ -54,6 +57,13 @@ func PlusPage() Node {
 				P(Raw(`<a href="https://htmx.org">HTMX</a> is a tiny Javascript library to give access to AJAX, websockets, and more, using HTML attributes. This fits perfectly with gomponents when you need that extra bit of client-side interactivity. Check out <a href="https://github.com/maragudk/gomponents-htmx">the gomponents-htmx library on Github</a>.`)),
 				H3(Text(`Example`)),
 				CodeBlock(htmx),
+			),
+		},
+		{
+			title: "AlpineJS", id: "alpinejs", body: Div(
+				P(Raw(`<a href="https://alpinejs.dev">AlpineJS</a> is a minimal framework for composing JavaScript behavior in your markup. It's a great fit with gomponents for adding client-side interactivity to your components. Check out <a href="https://github.com/glsubri/gomponents-alpine">gomponents-alpine</a> on Github for integration with gomponents.`)),
+				H3(Text(`Example`)),
+				CodeBlock(alpinejs),
 			),
 		},
 		{
