@@ -2,6 +2,8 @@ github.com/delaneyj/gomponents-iconify v0.0.0-20230611230628-e1005a1b979f h1:v58
 github.com/delaneyj/gomponents-iconify v0.0.0-20230611230628-e1005a1b979f/go.mod h1:ZjIP4npWKmVuJbvSjBTpzSl1QMimELl77gP/leg1bnI=
 github.com/eduardolat/gomponents-lucide v1.0.0 h1:Hy0oQEEp7q4zQXUPyeJTXHHpkoeJTYlvpM8RAXhK7ec=
 github.com/eduardolat/gomponents-lucide v1.0.0/go.mod h1:C0Yx64QM2RXIal8pl/HdWU0xac0uek+IQI2eZAaeAwk=
+github.com/glsubri/gomponents-alpine v0.2.3-0.20241025065026-ba98ec1e65f3 h1:a+se43UdgH54QF1Ey5wqRlK1tLW12WPVDRTyI2u756Y=
+github.com/glsubri/gomponents-alpine v0.2.3-0.20241025065026-ba98ec1e65f3/go.mod h1:hbjr9/rgZu745kMJ/ulvG5QnwpdRrAdp0EJjb4rcS80=
 github.com/maragudk/gomponents v0.20.0/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
 github.com/maragudk/gomponents v0.21.0 h1:s0QbrirP8/rH1P4kqN48DN2zjvpk9wHkSqi4+xp99SQ=
 github.com/maragudk/gomponents v0.21.0/go.mod h1:nHkNnZL6ODgMBeJhrZjkMHVvNdoYsfmpKB2/hjdQ0Hg=
