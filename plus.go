@@ -39,10 +39,14 @@ func PlusPage() Node {
 		{
 			title: `TailwindCSS`, id: `tailwindcss`, body: Div(
 				P(Raw(`gomponents works great together with <a href="https://tailwindcss.com">TailwindCSS</a>. In fact, this page is built using gomponents and TailwindCSS! Check out <a href="https://github.com/maragudk/gomponents.com">the source of this page</a>.`)),
+
+				P(Raw(`There's also the <a href="https://github.com/maragudk/gomponents-starter-kit">gomponents starter kit</a>, which includes TailwindCSS.`)),
+
 				H3(Text(`Example`)),
 				CodeBlock(tailwindcss),
+
 				H3(Text(`IntelliSense`)),
-				P(Raw(`If you're using VS Code, you can get Tailwind CSS IntelliSense <a href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss">by installing the following extension.</a> Then <a href="https://gist.github.com/eduardolat/438a1de077ccac6b9792153e708c1824">have a look at this gist</a> for the configuration.`)),
+				P(Raw(`You can get TailwindCSS auto-completion directly in your Go files! Check the <a href="https://github.com/maragudk/gomponents-starter-kit">readme in the gomponents starter kit</a> for instructions.`)),
 			),
 		},
 		{
@@ -55,6 +59,9 @@ func PlusPage() Node {
 		{
 			title: "HTMX", id: "htmx", body: Div(
 				P(Raw(`<a href="https://htmx.org">HTMX</a> is a tiny Javascript library to give access to AJAX, websockets, and more, using HTML attributes. This fits perfectly with gomponents when you need that extra bit of client-side interactivity. Check out <a href="https://github.com/maragudk/gomponents-htmx">the gomponents-htmx library on Github</a>.`)),
+
+				P(Raw(`There's also the <a href="https://github.com/maragudk/gomponents-starter-kit">gomponents starter kit</a>, which includes HTMX.`)),
+
 				H3(Text(`Example`)),
 				CodeBlock(htmx),
 			),

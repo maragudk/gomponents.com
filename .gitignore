@@ -2,4 +2,6 @@
 /docs/mentions/index.html
 /docs/plus/index.html
 /docs/styles/app.css
+/node_modules/
+/package.json
 /tailwindcss
