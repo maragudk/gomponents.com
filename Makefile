@@ -17,8 +17,8 @@ serve:
 tailwindcss:
 	curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
 	mv tailwindcss-macos-arm64 tailwindcss
-	chmod +x tailwindcss
-	mkdir -p node_modules/tailwindcss/lib && ln -s tailwindcss node_modules/tailwindcss/lib/cli.js
+	chmod a+x tailwindcss
+	mkdir -p node_modules/tailwindcss/lib && ln -sf tailwindcss node_modules/tailwindcss/lib/cli.js
 	echo '{"devDependencies": {"tailwindcss": "latest"}}' >package.json
 
 .PHONY: watch-css
