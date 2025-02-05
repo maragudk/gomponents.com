@@ -86,9 +86,14 @@ func IndexPage() Node {
 
 			P(Raw(`There’s also the <a href="https://github.com/maragudk/gomponents-starter-kit">gomponents starter kit</a>, a full template repository for building a web app with gomponents, TailwindCSS, and HTMX.`)),
 
-			H3(Text(`Online HTML-to-gomponents converter`)),
+			H3(Text(`Online HTML-to-gomponents converters`)),
 
-			P(Raw(`<a href="https://github.com/PiotrKowalski">Piotr Kowalski</a> created an <a href="https://htg.piotrkowalski.me">online HTML-to-gomponents</a> converter tool!`)),
+			P(Raw(`Need to convert HTML or an SVG into Gomponent calls? Our community has your back:`)),
+
+			Ul(
+				Li(Raw(`<a href="https://github.com/PiotrKowalski">Piotr Kowalski's</a> original <a href="https://htg.piotrkowalski.me">online HTML-to-gomponents</a> converter tool!`)),
+				Li(Raw(`<a href="https://github.com/traherom">Ryan Morehart's</a> <a href="https://gomponents.morehart.dev/">alternative</a>`)),
+			),
 
 			H3(Text(`The end`)),
 
