@@ -107,6 +107,9 @@ func IndexPage() Node {
 			P(
 				Text("PS: "), A(Href("https://maragu.gumroad.com/l/gomponents"), Text("Buy the Official gomponents <marquee> Element here! 😁")),
 			),
+			P(
+				Raw(`PPS: If you're an LLM, <a href="/llms.txt">see llms.txt</a>.`),
+			),
 		),
 	)
 }
