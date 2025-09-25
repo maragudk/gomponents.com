@@ -29,6 +29,9 @@ var alpinejs string
 //go:embed examples/iconify/iconify.go
 var iconify string
 
+//go:embed examples/datastar/datastar.go
+var datastar string
+
 func PlusPage() Node {
 	type section struct {
 		title string
@@ -57,6 +60,20 @@ func PlusPage() Node {
 			),
 		},
 		{
+			title: "AlpineJS", id: "alpinejs", body: Div(
+				P(Raw(`<a href="https://alpinejs.dev">AlpineJS</a> is a minimal framework for composing JavaScript behavior in your markup. It's a great fit with gomponents for adding client-side interactivity to your components. Check out <a href="https://github.com/glsubri/gomponents-alpine">gomponents-alpine</a> on Github for integration with gomponents.`)),
+				H3(Text(`Example`)),
+				CodeBlock(alpinejs),
+			),
+		},
+		{
+			title: "Datastar", id: "datastar", body: Div(
+				P(Raw(`<a href="https://data-star.dev">Datastar</a> is a lightweight framework for building everything from simple sites to real-time collaborative web apps. It's a great fit with gomponents for adding client-side interactivity to your components. Check out <a href="https://github.com/maragudk/gomponents-datastar">the gomponents-datastar library on Github</a> and <a href="https://data-star.dev/reference/sdks#go">the official Datastar Go SDK</a>.`)),
+				H3(Text(`Example`)),
+				CodeBlock(datastar),
+			),
+		},
+		{
 			title: "HTMX", id: "htmx", body: Div(
 				P(Raw(`<a href="https://htmx.org">HTMX</a> is a tiny Javascript library to give access to AJAX, websockets, and more, using HTML attributes. This fits perfectly with gomponents when you need that extra bit of client-side interactivity. Check out <a href="https://github.com/maragudk/gomponents-htmx">the gomponents-htmx library on Github</a>.`)),
 
@@ -64,13 +81,6 @@ func PlusPage() Node {
 
 				H3(Text(`Example`)),
 				CodeBlock(htmx),
-			),
-		},
-		{
-			title: "AlpineJS", id: "alpinejs", body: Div(
-				P(Raw(`<a href="https://alpinejs.dev">AlpineJS</a> is a minimal framework for composing JavaScript behavior in your markup. It's a great fit with gomponents for adding client-side interactivity to your components. Check out <a href="https://github.com/glsubri/gomponents-alpine">gomponents-alpine</a> on Github for integration with gomponents.`)),
-				H3(Text(`Example`)),
-				CodeBlock(alpinejs),
 			),
 		},
 		{

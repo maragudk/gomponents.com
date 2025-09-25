@@ -15,6 +15,7 @@ require (
 	github.com/eduardolat/gomponents-lucide v1.0.0
 	github.com/glsubri/gomponents-alpine v0.2.3-0.20241025065026-ba98ec1e65f3
 	github.com/maragudk/gomponents-heroicons/v2 v2.0.0
-	maragu.dev/gomponents v1.0.0
+	maragu.dev/gomponents v1.2.0
+	maragu.dev/gomponents-datastar v0.0.0-20250925112336-c3d958f18a71
 	maragu.dev/gomponents-htmx v0.6.0
 )
